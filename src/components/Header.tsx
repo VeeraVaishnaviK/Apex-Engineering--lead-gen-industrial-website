@@ -8,18 +8,6 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="top-bar">
-        <div className="container flex-between">
-          <div className="contact-info">
-            <span>📞 +91 89253 01739</span>
-            <span className="ml-4">✉️ apeexengineering@gmail.com</span>
-          </div>
-          <div className="location">
-            📍 Chennai, India
-          </div>
-        </div>
-      </div>
-      
       <nav className="main-nav">
         <div className="container flex-between">
           <Link href="/" className="logo">
