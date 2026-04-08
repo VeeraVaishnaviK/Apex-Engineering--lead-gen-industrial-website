@@ -8,40 +8,34 @@ export const metadata: Metadata = {
 
 const industries = [
   {
-    title: "General Manufacturing",
-    icon: "🏭",
-    desc: "From machine frames to heavy-duty workstation setups, we support all types of production units.",
-    points: ["Heavy Duty Tables", "Safety Cages", "Machine Guarding"]
+    title: "Primary Manufacturing",
+    desc: "From structural machine bases to specialized safety enclosures, we engineer the foundational metalwork for heavy-duty production units.",
+    points: ["Load-Bearing Work Tables", "Safety & Perimeter Cages", "Machine Structural Frames"]
   },
   {
-    title: "Pharmaceutical & Healthcare",
-    icon: "🔬",
-    desc: "Hygiene-first fabrication using premium SS 304/316 for cleanrooms and laboratories.",
-    points: ["S.S Workbenches", "Hygienic Trolleys", "Storage Cabinets"]
+    title: "Pharmaceutical & Clinical",
+    desc: "Hygiene-first fabrication using certified SS 304 and 316 grades. We deliver non-corrosive, easy-to-sanitize equipment for controlled lab environments.",
+    points: ["S.S Chemical Benches", "Hygienic Material Trolleys", "Sterile Storage Cabinets"]
   },
   {
-    title: "Logistics & Warehousing",
-    icon: "📦",
-    desc: "Material handling solutions designed to optimize floor efficiency and movement.",
-    points: ["Platform Trolleys", "Roller Conveyors", "Pallet Cages"]
+    title: "Logistics & Distribution",
+    desc: "Engineered material handling solutions designed for high-throughput warehouse logistics and floor optimization.",
+    points: ["Heavy-Duty Platform Trolleys", "Motorized Roller Conveyors", "Stackable Pallet Cages"]
   },
   {
-    title: "Automotive Industrial",
-    icon: "🚗",
-    desc: "Robust equipment built to withstand the rigorous demands of automotive assembly corridors.",
-    points: ["Welding Stations", "Engine Trolleys", "Parts Racks"]
+    title: "Automotive Industrial Hubs",
+    desc: "Robust equipment specifically built to withstand the high-cycle demands of large-scale automotive assembly corridors.",
+    points: ["Heavy-Duty Welding Jigs", "Engine Storage Trolleys", "Sub-assembly Part Racks"]
   },
   {
-    title: "Office & Commercial",
-    icon: "🏢",
-    desc: "Functional and aesthetic metal structures for modern office spaces and retail.",
-    points: ["Display Boards", "Filing Cabinets", "Custom Partitions"]
+    title: "Commercial & Corporate",
+    desc: "Functional metal structures that blend durability with modern industrial aesthetics for professional workspaces.",
+    points: ["Precision Display Units", "Filing & Documentation Grade Cabinets", "Custom Office Partitions"]
   },
   {
-    title: "Research & Development",
-    icon: "🧬",
-    desc: "Highly customizable lab equipment and prototype frames for innovation centers.",
-    points: ["Lab Workbenches", "Utility Carts", "Modular Profiles"]
+    title: "R&D and Innovation Centers",
+    desc: "Rapid prototyping frames and modular workstation systems for high-tech research and electronic assembly labs.",
+    points: ["Technical Lab Workbenches", "Lean Utility Carts", "Modular Profile Enclosures"]
   }
 ];
 
@@ -57,7 +51,6 @@ const IndustriesPage = () => {
         {industries.map((ind, i) => (
           <div key={i} className="industry-box">
             <div className="industry-content">
-              <span className="industry-icon" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', display: 'block' }}>{ind.icon}</span>
               <h3>{ind.title}</h3>
               <p>{ind.desc}</p>
               <ul className="points">

@@ -9,39 +9,33 @@ export const metadata: Metadata = {
 const services = [
   {
     id: "industrial-fabrication",
-    title: "Industrial & Commercial Fabrication",
-    desc: "Custom structures for factories, warehouses, and modern offices. We handle everything from heavy machinery frames to aesthetic office partitions.",
-    icon: "🏭"
+    title: "Project-Based Industrial Fabrication",
+    desc: "We specialize in the fabrication of robust MS, SS, and Aluminium structures tailored for manufacturing units and large-scale industrial plants. Our team handles everything from structural support frames to custom utility enclosures."
   },
   {
     id: "welding-works",
-    title: "Welding Works — TIG, MIG & Arc",
-    desc: "Precision welding with high-grade equipment. We specialize in high-strength joints for MS and SS structures that meet industrial safety standards.",
-    icon: "🔥"
+    title: "Precision Welding — TIG, MIG & Arc",
+    desc: "Standard-certified welding services ensuring high structural integrity and fatigue resistance. We provide specialized welding solutions for heavy-gauge sections and high-precision stainless steel assemblies."
   },
   {
     id: "sheet-metal",
-    title: "Sheet Metal Fabrication",
-    desc: "Manufacturing of panels, ducts, frames, and custom parts with high precision and tight tolerances for diversos industrial applications.",
-    icon: "📐"
+    title: "Precision Sheet Metal Work",
+    desc: "Advanced folding, bending, and laser-consistent cutting for industrial panels, ducts, and machine components. We maintain tight tolerances to ensure perfect fitment for your assemblies."
   },
   {
     id: "aluminium-extrusion",
-    title: "Aluminium Extrusion Profile Works",
-    desc: "Highly versatile modular structures using aluminium profiles. Ideal for trolleys, working tables, and laboratory frames.",
-    icon: "🏗️"
+    title: "Modular Aluminium Profile Systems",
+    desc: "Lightweight, high-strength T-slot and V-slot aluminium profile assembly. Ideal for modular workstations, laboratory frames, and rapid-deployment production units."
   },
   {
     id: "surface-finishing",
-    title: "Surface Finishing",
-    desc: "High-quality powder coating, polishing, and anodizing services to enhance durability and aesthetic appeal of your products.",
-    icon: "✨"
+    title: "Protective Surface Engineering",
+    desc: "Enhancing structural lifespan with industrial-grade powder coating, chemical passivating, and polishing. Our finishes are optimized for Chennai's high-humidity environments."
   },
   {
     id: "assembly-installation",
-    title: "Assembly & Installation",
-    desc: "On-site fitting and project execution. Our team ensures your equipment is installed and tested for peak performance at your facility.",
-    icon: "⚙️"
+    title: "On-site Integration & Fitting",
+    desc: "Deployment of fabricated components directly onto your shop floor. Our technical team performs the final assembly and on-site testing to ensure project specifications are fully met."
   }
 ];
 
@@ -56,7 +50,6 @@ const ServicesPage = () => {
       <div className="grid services-grid">
         {services.map((service) => (
           <div key={service.id} className="service-card-full">
-            <span className="service-icon">{service.icon}</span>
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
             <Link href="/contact" className="service-cta">Enquire Now →</Link>

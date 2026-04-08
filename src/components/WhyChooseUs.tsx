@@ -2,11 +2,11 @@
 
 const WhyChooseUs = () => {
   const reasons = [
-    { title: "Custom Fabrication", desc: "Tailored structures to meet your specific industrial dimensions and needs.", icon: "🛠️" },
-    { title: "Fast Delivery", desc: "Efficient project management ensuring timely delivery across Tamil Nadu.", icon: "🚚" },
-    { title: "Premium Materials", desc: "Using high-grade MS, SS, and Aluminium for long-lasting durability.", icon: "💎" },
-    { title: "On-site Installation", desc: "Expert assembly and fitting services at your facility.", icon: "🏗️" },
-    { title: "Competitive Pricing", desc: "Industrial-grade quality at prices that fit your business budget.", icon: "💰" },
+    { title: "Precision Fabrication", desc: "Technical blueprints translated into sub-millimeter accurate MS, SS, and Aluminium structures." },
+    { title: "Rapid Turnaround", desc: "Optimized production workflows ensuring project completion and Chennai-wide delivery within tight deadlines." },
+    { title: "Industrial-Grade Quality", desc: "Use of certified raw materials and heavy-gauge sections for maximum structural longevity." },
+    { title: "On-site Deployment", desc: "Seamless installation and on-site fitting by our specialized technical team." },
+    { title: "Value Engineering", desc: "High-spec engineering solutions at competitive rates through lean manufacturing processes." },
   ];
 
   return (
@@ -22,7 +22,6 @@ const WhyChooseUs = () => {
             <div className="reasons-list">
               {reasons.map((r, i) => (
                 <div key={i} className="reason-item">
-                  <span className="reason-icon">{r.icon}</span>
                   <div>
                     <h4>{r.title}</h4>
                     <p>{r.desc}</p>

@@ -28,10 +28,10 @@ const Footer = () => {
 
           <div className="footer-contact">
             <h3>Contact Us</h3>
-            <p>📍 1/2 Balambigai Nagar 1st Main Road, Rampuram, Chennai 600089</p>
-            <p>📞 +91 89253 01739</p>
-            <p>📞 +91 72008 11328</p>
-            <p>✉️ apeexengineering@gmail.com</p>
+            <p>1/2 Balambigai Nagar 1st Main Road, Rampuram, Chennai 600089</p>
+            <p>Phone: +91 89253 01739</p>
+            <p>Phone: +91 72008 11328</p>
+            <p>Email: apeexengineering@gmail.com</p>
           </div>
 
           <div className="footer-map">

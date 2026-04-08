@@ -7,9 +7,9 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content fade-in">
           <span className="hero-badge">Trusted by 50+ Industries</span>
-          <h1>Industrial Fabrication & Material Handling Equipment in Chennai</h1>
+          <h1>Precision Engineering. Durable Steel. Custom Fabrication in Chennai.</h1>
           <p>
-            Custom-built MS, SS & Aluminium structures for factories, warehouses & labs. Engineering excellence with 10+ years of expertise.
+            From heavy-duty MS structures to high-precision laboratory workstations—we engineer the backbone of your industrial floor.
           </p>
           <div className="hero-btns">
             <Link href="/contact" className="btn btn-primary">Get Free Quote</Link>

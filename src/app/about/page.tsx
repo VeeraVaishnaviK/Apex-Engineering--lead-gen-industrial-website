@@ -10,10 +10,10 @@ const AboutPage = () => {
     <div className="about-page">
       <section className="section bg-light">
         <div className="container text-center">
-          <span className="subtitle">Our Story</span>
-          <h1>Engineering with Excellence Since 2012</h1>
+          <span className="subtitle">Our Legacy</span>
+          <h1>A Decade of Engineering Precision</h1>
           <p className="lead-text">
-            Apex Engineering was founded with a simple mission: to provide Chennai's booming industrial sector with high-quality, custom-fabricated solutions that stand the test of time.
+            Apex Engineering was established to bridge the gap between complex industrial requirements and high-durability metal fabrication. Operating from the heart of Chennai's manufacturing zone, we provide technical-grade solutions for India's growing industrial infrastructure.
           </p>
         </div>
       </section>
@@ -32,12 +32,12 @@ const AboutPage = () => {
               
               <div className="mission-vision">
                 <div className="card">
-                  <h4>Our Mission</h4>
-                  <p>To be the most trusted engineering partner for Indian industries by providing innovative, quality-driven fabrication solutions.</p>
+                  <h4>Technical Mission</h4>
+                  <p>To deliver high-integrity fabricated structures that optimize shop-floor utility and ensure long-term operational safety.</p>
                 </div>
                 <div className="card">
-                  <h4>Our Vision</h4>
-                  <p>To set the benchmark for engineering excellence and custom fabrication in India through technical expertise and customer focus.</p>
+                  <h4>Industrial Vision</h4>
+                  <p>To define the standard for precision engineering in the Chennai industrial corridor through continuous process innovation.</p>
                 </div>
               </div>
             </div>
