@@ -7,7 +7,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="header">
+    <header className={`header ${isOpen ? 'active' : ''}`}>
       <nav className="main-nav">
         <div className="container flex-between">
           <Link href="/" className="logo">
@@ -23,6 +23,11 @@ const Header = () => {
             <Link href="/industries" onClick={() => setIsOpen(false)}>Industries</Link>
             <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
             <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+            
+            {/* Mobile Only CTA */}
+            <a href="https://wa.me/917200811328" className="btn btn-primary nav-mobile-cta" onClick={() => setIsOpen(false)}>
+              Get a Quote
+            </a>
           </div>
 
           <div className="nav-cta">

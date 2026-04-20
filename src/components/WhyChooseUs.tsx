@@ -22,6 +22,7 @@ const WhyChooseUs = () => {
             <div className="reasons-list">
               {reasons.map((r, i) => (
                 <div key={i} className="reason-item">
+                  <div className="reason-tick">✓</div>
                   <div>
                     <h4>{r.title}</h4>
                     <p>{r.desc}</p>
@@ -43,7 +44,7 @@ const WhyChooseUs = () => {
       <style jsx>{`
         .flex-layout {
           display: flex;
-          gap: 4rem;
+          gap: 5rem;
           align-items: center;
         }
         .content-side { flex: 1.2; }
@@ -51,53 +52,72 @@ const WhyChooseUs = () => {
         .subtitle {
           color: var(--accent);
           text-transform: uppercase;
-          font-weight: 700;
+          font-weight: 800;
           letter-spacing: 2px;
           display: block;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
+          font-size: 0.85rem;
         }
-        h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        h2 { font-size: 2.8rem; margin-bottom: 2rem; line-height: 1.2; }
+        .reasons-list { margin-top: 2.5rem; }
         .reason-item {
           display: flex;
-          gap: 1.5rem;
-          margin-bottom: 1.5rem;
+          gap: 1.25rem;
+          margin-bottom: 2rem;
         }
-        .reason-icon {
-          font-size: 1.5rem;
-          background: var(--gray-100);
-          width: 50px;
-          height: 50px;
+        .reason-tick {
+          width: 24px;
+          height: 24px;
+          background: var(--navy);
+          color: var(--white);
+          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 50%;
+          font-size: 0.7rem;
+          font-weight: 900;
           flex-shrink: 0;
+          margin-top: 0.25rem;
         }
-        h4 { margin-bottom: 0.25rem; font-size: 1.1rem; }
-        .reason-item p { font-size: 0.9rem; margin-bottom: 0; }
+        h4 { margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 800; color: var(--navy); }
+        .reason-item p { font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: var(--gray-700); }
         .side-img {
           width: 100%;
-          border-radius: 12px;
-          box-shadow: var(--shadow-lg);
+          border-radius: 20px;
+          box-shadow: var(--shadow-xl);
+          object-fit: cover;
+          height: 500px;
         }
         .experience-badge {
           position: absolute;
-          top: -20px;
-          left: -20px;
+          top: 30px;
+          left: -30px;
           background: var(--navy);
           color: var(--white);
-          padding: 1.5rem;
-          border-radius: 8px;
+          padding: 2rem 1.5rem;
+          border-radius: 12px;
           text-align: center;
           z-index: 2;
-          box-shadow: var(--shadow-lg);
+          box-shadow: var(--shadow-xl);
+          border: 4px solid var(--white);
         }
-        .experience-badge strong { font-size: 2rem; display: block; }
-        .experience-badge span { font-size: 0.8rem; text-transform: uppercase; }
+        .experience-badge strong { font-size: 2.5rem; display: block; line-height: 1; margin-bottom: 0.25rem; }
+        .experience-badge span { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
 
         @media (max-width: 992px) {
-          .flex-layout { flex-direction: column; }
-          .image-side { order: -1; margin-bottom: 3rem; }
+          .flex-layout { flex-direction: column; gap: 4rem; }
+          .image-side { order: -1; width: 100%; }
+          .side-img { height: 400px; }
+          .experience-badge { left: 20px; top: -30px; padding: 1.5rem; }
+          .experience-badge strong { font-size: 2rem; }
+          h2 { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 480px) {
+          .side-img { height: 300px; }
+          .experience-badge { left: 10px; top: -20px; padding: 1rem; }
+          .experience-badge strong { font-size: 1.8rem; }
+          h2 { font-size: 1.8rem; }
         }
       `}</style>
     </section>

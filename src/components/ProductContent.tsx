@@ -31,16 +31,18 @@ export default function ProductContent({ product, relatedProducts }: any) {
                 </ul>
 
                 <h3>Specifications</h3>
-                <table className="specs-table">
-                  <tbody>
-                    {Object.entries(product.specifications).map(([key, val]: any) => (
-                      <tr key={key}>
-                        <th>{key}</th>
-                        <td>{val}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="specs-table-wrapper">
+                  <table className="specs-table">
+                    <tbody>
+                      {Object.entries(product.specifications).map(([key, val]: any) => (
+                        <tr key={key}>
+                          <th>{key}</th>
+                          <td>{val}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
 
                 {product.useCases && product.useCases.length > 0 && (
                   <>
@@ -106,29 +108,72 @@ export default function ProductContent({ product, relatedProducts }: any) {
         </div>
       </div>
 
+      <div className="mobile-sticky-cta">
+        <a 
+          href={`https://wa.me/917200811328?text=Hi Apex Engineering, I'm interested in ${product.name}. Please share the price and details.`} 
+          className="btn btn-primary w-full"
+          target="_blank"
+        >
+          Enquire on WhatsApp
+        </a>
+      </div>
+
       <style dangerouslySetInnerHTML={{ __html: `
-        .breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; color: var(--gray-700); }
+        .breadcrumb { margin-bottom: 2rem; font-size: 0.85rem; color: var(--gray-700); background: var(--gray-100); padding: 0.75rem 1rem; border-radius: 8px; }
         .main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
         .image-gallery { margin-bottom: 3rem; }
-        .main-image { background: var(--gray-100); border-radius: 12px; overflow: hidden; height: 450px; }
+        .main-image { background: var(--gray-100); border-radius: 20px; overflow: hidden; height: 500px; box-shadow: var(--shadow-lg); }
         .main-image img { width: 100%; height: 100%; object-fit: cover; }
-        .hook { font-size: 1.25rem; font-weight: 600; color: var(--navy); margin-bottom: 2rem; }
-        .rich-content h2, .rich-content h3 { margin-top: 2.5rem; margin-bottom: 1rem; }
-        .specs-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
-        .specs-table th, .specs-table td { padding: 1rem; border: 1px solid var(--gray-200); text-align: left; }
-        .specs-table th { background: var(--gray-100); width: 30%; }
-        .faq-section { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--gray-200); }
-        .faq-item { margin-bottom: 1.5rem; }
-        .faq-item h4 { margin-bottom: 0.5rem; }
-        .sidebar-card { background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 2rem; border: 1px solid var(--gray-200); }
-        .quote-sidebar h3 { margin-bottom: 1rem; }
-        .trust-badges-mini { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem; font-size: 0.85rem; font-weight: 700; color: var(--navy); }
-        .related-item { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; }
-        .related-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 4px; }
-        .related-item h4 { font-size: 0.95rem; margin-bottom: 0.2rem; }
-        .related-item span { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+        .hook { font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 2rem; line-height: 1.3; }
+        .rich-content h2, .rich-content h3 { margin-top: 3rem; margin-bottom: 1.25rem; font-weight: 800; }
+        .specs-table-wrapper { overflow-x: auto; margin: 2rem 0; border-radius: 12px; border: 1px solid var(--gray-200); }
+        .specs-table { width: 100%; border-collapse: collapse; min-width: 400px; }
+        .specs-table th, .specs-table td { padding: 1.25rem; border-bottom: 1px solid var(--gray-200); text-align: left; }
+        .specs-table tr:last-child th, .specs-table tr:last-child td { border-bottom: none; }
+        .specs-table th { background: var(--gray-100); width: 35%; font-weight: 700; color: var(--navy); }
+        .faq-section { margin-top: 5rem; padding-top: 4rem; border-top: 1px solid var(--gray-200); }
+        .faq-item { margin-bottom: 2rem; }
+        .faq-item h4 { margin-bottom: 0.75rem; font-size: 1.1rem; color: var(--navy); }
+        .sidebar { position: sticky; top: 100px; height: fit-content; }
+        .sidebar-card { background: var(--white); padding: 2.5rem; border-radius: 16px; box-shadow: var(--shadow-xl); margin-bottom: 2rem; border: 1px solid rgba(0, 31, 63, 0.05); }
+        .quote-sidebar { background: var(--navy); color: var(--white); border: none; }
+        .quote-sidebar h3 { color: var(--white); margin-bottom: 1rem; font-size: 1.5rem; }
+        .quote-sidebar p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; }
+        .trust-badges-mini { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; font-size: 0.9rem; font-weight: 600; color: rgba(255, 255, 255, 0.9); }
+        .related-item { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; align-items: center; text-decoration: none; padding: 0.75rem; border-radius: 10px; transition: var(--transition); }
+        .related-item:hover { background: var(--gray-100); }
+        .related-item img { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; }
+        .related-item h4 { font-size: 1rem; margin-bottom: 0.25rem; color: var(--navy); }
+        .related-item span { font-size: 0.8rem; color: var(--accent); font-weight: 700; text-transform: uppercase; }
         .w-full { width: 100%; }
-        @media (max-width: 992px) { .main-layout { grid-template-columns: 1fr; } .sidebar { order: -1; } }
+        
+        .mobile-sticky-cta {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: var(--white);
+          padding: 1rem 1.25rem;
+          box-shadow: 0 -10px 25px rgba(0,0,0,0.1);
+          z-index: 999;
+          backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 992px) { 
+          .main-layout { grid-template-columns: 1fr; gap: 3rem; } 
+          .sidebar { order: 2; position: static; } 
+          .main-image { height: 350px; }
+          .mobile-sticky-cta { display: block; }
+          .section { padding-bottom: 8rem; }
+        }
+        
+        @media (max-width: 480px) {
+          .main-image { height: 280px; }
+          .hook { font-size: 1.2rem; }
+          .specs-table th { width: 40%; padding: 1rem; }
+          .specs-table td { padding: 1rem; font-size: 0.9rem; }
+        }
       `}} />
     </div>
   );

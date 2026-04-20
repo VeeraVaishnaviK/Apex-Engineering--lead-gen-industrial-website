@@ -70,9 +70,9 @@ export default function Home() {
               <h2>Get a Free Quote in 24 Hours</h2>
               <p>Ready to start your project? Fill out the form or reach out to us directly on WhatsApp.</p>
               <ul className="trust-points">
-                <li>✅ Custom Designs Welcome</li>
-                <li>✅ Expert On-site Consultation</li>
-                <li>✅ Chennai-wide Delivery</li>
+                <li>Custom Designs Welcome</li>
+                <li>Expert On-site Consultation</li>
+                <li>Chennai-wide Delivery</li>
               </ul>
             </div>
             <form className="quote-form" onSubmit={(e) => e.preventDefault()}>
