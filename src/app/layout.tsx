@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LeadPopup from "@/components/LeadPopup";
+import WhatsAppFloating from "@/components/WhatsAppFloating";
 
 export const metadata: Metadata = {
   title: "Industrial Fabrication & Material Handling Equipment Chennai | Apex Engineering",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <LeadPopup />
+        <WhatsAppFloating />
       </body>
     </html>
   );
