@@ -1,9 +1,42 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = "https://apexengineering.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Industrial & Commercial Fabrication Services Chennai | Apex Engineering",
-  description: "Explore our range of fabrication services including welding, sheet metal work, aluminium extrusion profile work, and decorative finishing in Chennai.",
+  title: "Industrial Fabrication Services — Welding, Sheet Metal & More",
+  description:
+    "Explore Apex Engineering's full range of fabrication services: project-based industrial fabrication, precision TIG/MIG/Arc welding, sheet metal work, aluminium profile systems, surface finishing, and on-site installation in Chennai.",
+  alternates: { canonical: `${BASE_URL}/services` },
+  keywords: [
+    "industrial fabrication services Chennai",
+    "welding services Chennai",
+    "sheet metal fabrication Chennai",
+    "aluminium profile systems Tamil Nadu",
+    "powder coating Chennai",
+    "on-site installation fabrication",
+  ],
+  openGraph: {
+    title: "Industrial Fabrication Services | Apex Engineering Chennai",
+    description:
+      "Expert welding, sheet metal work, aluminium extrusion, surface finishing and on-site installation services in Chennai. Custom fabrication for all industries.",
+    url: `${BASE_URL}/services`,
+    images: [
+      {
+        url: "/hero_industrial_workshop_1775677983634.png",
+        width: 1200,
+        height: 630,
+        alt: "Apex Engineering fabrication services in Chennai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Fabrication Services | Apex Engineering Chennai",
+    description:
+      "Welding, sheet metal, aluminium profiles, surface finishing & installation in Chennai. Get a custom quote today.",
+    images: ["/hero_industrial_workshop_1775677983634.png"],
+  },
 };
 
 const services = [

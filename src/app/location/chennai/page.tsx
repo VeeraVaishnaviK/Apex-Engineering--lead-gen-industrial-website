@@ -1,9 +1,42 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = "https://apexengineering.vercel.app";
+
 export const metadata: Metadata = {
   title: "Industrial Fabrication Services in Chennai | Apex Engineering",
-  description: "Premier MS fabrication and material handling equipment manufacturer in Chennai. Serving Ambattur, Guindy, Sriperumbudur, and surrounding industrial hubs.",
+  description:
+    "Premier MS fabrication and material handling equipment manufacturer in Chennai. Serving Ambattur, Guindy, Sriperumbudur, Oragadam, Manali, and surrounding industrial hubs with custom-built solutions.",
+  alternates: { canonical: `${BASE_URL}/location/chennai` },
+  keywords: [
+    "industrial fabrication Chennai",
+    "material handling equipment Ambattur",
+    "MS fabrication Guindy Chennai",
+    "working tables Sriperumbudur",
+    "ABS trolley Mahindra World City",
+    "SS structures Manali Ennore",
+  ],
+  openGraph: {
+    title: "Industrial Fabrication in Chennai | Apex Engineering",
+    description:
+      "Custom MS, SS & Aluminium fabrication for Chennai’s industrial hubs: Ambattur, Guindy, Sriperumbudur, Oragadam, Manali. On-site installation available.",
+    url: `${BASE_URL}/location/chennai`,
+    images: [
+      {
+        url: "/hero_industrial_workshop_1775677983634.png",
+        width: 1200,
+        height: 630,
+        alt: "Apex Engineering serving Chennai industrial zones",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Fabrication in Chennai | Apex Engineering",
+    description:
+      "Serving Ambattur, Guindy, Sriperumbudur & more. Custom MS/SS/Aluminium fabrication in Chennai.",
+    images: ["/hero_industrial_workshop_1775677983634.png"],
+  },
 };
 
 const ChennaiLocationPage = () => {

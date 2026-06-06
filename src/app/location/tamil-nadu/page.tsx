@@ -1,9 +1,41 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = "https://apexengineering.vercel.app";
+
 export const metadata: Metadata = {
   title: "Industrial Equipment Manufacturer Tamil Nadu | Apex Engineering",
-  description: "Custom material handling systems and industrial fabrication across Tamil Nadu. Serving Coimbatore, Madurai, Trichy, and Hosur industrials.",
+  description:
+    "Custom material handling systems and industrial fabrication across Tamil Nadu. Serving Coimbatore, Madurai, Trichy, Hosur, and Tiruppur industrial clusters with MS, SS & Aluminium solutions.",
+  alternates: { canonical: `${BASE_URL}/location/tamil-nadu` },
+  keywords: [
+    "industrial fabrication Tamil Nadu",
+    "material handling equipment Coimbatore",
+    "custom fabrication Hosur",
+    "SS fabrication Tiruppur",
+    "heavy fabrication Madurai Trichy",
+  ],
+  openGraph: {
+    title: "Industrial Equipment Manufacturer Tamil Nadu | Apex Engineering",
+    description:
+      "Statewide delivery of custom MS, SS & Aluminium industrial equipment. Serving Coimbatore, Hosur, Madurai, Trichy, Tiruppur and all Tamil Nadu industrial hubs.",
+    url: `${BASE_URL}/location/tamil-nadu`,
+    images: [
+      {
+        url: "/hero_industrial_workshop_1775677983634.png",
+        width: 1200,
+        height: 630,
+        alt: "Apex Engineering serving Tamil Nadu industrial hubs",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Manufacturer Tamil Nadu | Apex Engineering",
+    description:
+      "Serving Coimbatore, Hosur, Madurai & more. Custom industrial fabrication across Tamil Nadu.",
+    images: ["/hero_industrial_workshop_1775677983634.png"],
+  },
 };
 
 const TamilNaduLocationPage = () => {

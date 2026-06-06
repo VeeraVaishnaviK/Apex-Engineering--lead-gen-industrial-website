@@ -1,8 +1,39 @@
 import { Metadata } from "next";
 
+const BASE_URL = "https://apexengineering.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Contact Apex Engineering | Industrial Hub Chennai",
-  description: "Get in touch with Apex Engineering for your industrial fabrication needs. Request a quote or visit our facility in Rampuram, Chennai.",
+  title: "Contact Apex Engineering | Get a Free Industrial Fabrication Quote",
+  description:
+    "Contact Apex Engineering in Rampuram, Chennai for custom MS, SS & Aluminium fabrication, industrial trolleys, and material handling equipment. Call +91 89253 01739 or request a quote online.",
+  alternates: { canonical: `${BASE_URL}/contact` },
+  keywords: [
+    "contact Apex Engineering Chennai",
+    "industrial fabrication quote Chennai",
+    "custom fabrication enquiry Tamil Nadu",
+    "Rampuram industrial manufacturer",
+  ],
+  openGraph: {
+    title: "Contact Apex Engineering | Industrial Fabrication Quote — Chennai",
+    description:
+      "Get in touch for custom MS/SS/Aluminium fabrication. Rampuram, Chennai. Call +91 89253 01739 or send an enquiry. Free quote in 24 hours.",
+    url: `${BASE_URL}/contact`,
+    images: [
+      {
+        url: "/hero_industrial_workshop_1775677983634.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Apex Engineering industrial fabrication Chennai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Apex Engineering Chennai | Free Quote",
+    description:
+      "Custom industrial fabrication in Chennai. Get a free quote from Apex Engineering. +91 89253 01739.",
+    images: ["/hero_industrial_workshop_1775677983634.png"],
+  },
 };
 
 const ContactPage = () => {

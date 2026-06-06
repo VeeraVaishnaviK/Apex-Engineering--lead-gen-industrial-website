@@ -1,9 +1,41 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+const BASE_URL = "https://apexengineering.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Industries Served | Custom Engineering Solutions Chennai",
-  description: "Apex Engineering serves a wide range of industries including Manufacturing, Pharmaceutical, Automotive, and Logistics with specialized fabrication.",
+  title: "Industries Served | Manufacturing, Pharma, Automotive & Logistics",
+  description:
+    "Apex Engineering serves a wide range of industries including Manufacturing, Pharmaceutical, Automotive, and Logistics with specialised custom fabrication from Chennai, Tamil Nadu.",
+  alternates: { canonical: `${BASE_URL}/industries` },
+  keywords: [
+    "industrial fabrication for pharmaceuticals Chennai",
+    "automotive parts manufacturer Tamil Nadu",
+    "manufacturing plant equipment Chennai",
+    "logistics warehouse solutions Chennai",
+    "laboratory workbench pharmaceutical",
+  ],
+  openGraph: {
+    title: "Industries Served | Apex Engineering Chennai",
+    description:
+      "Custom fabrication solutions for Manufacturing, Pharmaceutical, Automotive, and Logistics industries. Based in Chennai, serving all of Tamil Nadu.",
+    url: `${BASE_URL}/industries`,
+    images: [
+      {
+        url: "/hero_industrial_workshop_1775677983634.png",
+        width: 1200,
+        height: 630,
+        alt: "Industries served by Apex Engineering Chennai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industries Served | Apex Engineering Chennai",
+    description:
+      "Fabrication solutions for Manufacturing, Pharma, Automotive & Logistics. Based in Chennai.",
+    images: ["/hero_industrial_workshop_1775677983634.png"],
+  },
 };
 
 const industries = [
