@@ -3,6 +3,7 @@
 import Hero from "@/components/Hero";
 import CategoryGrid from "@/components/CategoryGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import QuoteForm from "@/components/QuoteForm";
 import Link from "next/link";
 import FaqSection from "@/components/FaqSection";
 
@@ -87,37 +88,7 @@ export default function HomeContent() {
                 <li>Chennai-wide Delivery</li>
               </ul>
             </div>
-            <form
-              className="quote-form"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <div className="form-group">
-                <input type="text" placeholder="Your Name" required />
-              </div>
-              <div className="form-group">
-                <input
-                  type="tel"
-                  placeholder="Phone Number (Required)"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <select>
-                  <option>Select Product Interest</option>
-                  <option>Working Tables &amp; Benches</option>
-                  <option>Trolleys &amp; Carts</option>
-                  <option>Storage &amp; Racks</option>
-                  <option>Conveyors &amp; Material Handling</option>
-                  <option>Custom Fabrication</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <textarea placeholder="Tell us about your requirements..."></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary w-full">
-                Request Price via WhatsApp
-              </button>
-            </form>
+            <QuoteForm />
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 
 const BASE_URL = "https://www.apexengineering.org.in";
 
@@ -70,41 +71,7 @@ const ContactPage = () => {
         </div>
 
         <div className="form-side">
-          <div className="quote-form-card">
-            <h2>Send an Enquiry</h2>
-            <form>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Full Name</label>
-                  <input type="text" placeholder="e.g. John Doe" required />
-                </div>
-                <div className="form-group">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 XXXXX XXXXX" required />
-                </div>
-              </div>
-              <div className="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="john@company.com" required />
-              </div>
-              <div className="form-group">
-                <label>Product Interest</label>
-                <select>
-                  <option>Working Tables & Benches</option>
-                  <option>Trolleys & Carts</option>
-                  <option>Storage & Racks</option>
-                  <option>Industrial Equipment</option>
-                  <option>Display & Signage</option>
-                  <option>Raw Materials & Fabrication</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label>Requirements</label>
-                <textarea placeholder="Please describe your dimensions, material, and and quantity..."></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary w-full">Submit Request</button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </div>
 
@@ -124,3 +91,4 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+

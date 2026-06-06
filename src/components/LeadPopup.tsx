@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 const LeadPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -34,8 +35,20 @@ const LeadPopup = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
+    // Save lead to database
+    try {
+      await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, source: 'popup' }),
+      });
+    } catch {
+      // Silently fail — still redirect to WhatsApp
+    }
     
     // Construct WhatsApp message
     const message = `Hi Apex Engineering, I'm interested in your services.
@@ -51,6 +64,7 @@ Requirements: ${formData.requirements}`;
     window.open(whatsappUrl, '_blank');
     
     // Close popup and mark as dismissed
+    setIsSubmitting(false);
     setIsVisible(false);
     localStorage.setItem('leadPopupDismissed', 'true');
   };
@@ -123,8 +137,8 @@ Requirements: ${formData.requirements}`;
             ></textarea>
           </div>
 
-          <button type="submit" className="lead-submit-btn">
-            Submit Requirements
+          <button type="submit" className="lead-submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? 'Submitting...' : 'Submit Requirements'}
           </button>
         </form>
       </div>
