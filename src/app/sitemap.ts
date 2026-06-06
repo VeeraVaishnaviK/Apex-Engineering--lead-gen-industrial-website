@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { PRODUCTS } from "@/data/productData";
 import { BLOG_POSTS } from "@/data/blogData";
 
-const BASE_URL = "https://apexengineering.vercel.app";
+const BASE_URL = "https://www.apexengineering.org.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

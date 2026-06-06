@@ -6,7 +6,7 @@ import LeadPopup from "@/components/LeadPopup";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
 import Schema from "@/components/Schema";
 
-const BASE_URL = "https://apexengineering.vercel.app";
+const BASE_URL = "https://www.apexengineering.org.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Apex Engineering Chennai",
   },
   description:
-    "Apex Engineering Chennai — trusted partner for custom MS, SS & Aluminium fabrication, industrial trolleys, working tables, and storage racks. 10+ years · 500+ projects · Chennai-wide delivery.",
+    "Apex Engineering Chennai - trusted partner for custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks. 10+ years, 500+ projects, Chennai-wide delivery.",
   keywords: [
     "Industrial trolley manufacturer Chennai",
     "MS fabrication Chennai",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Apex Engineering",
     title: "Industrial Fabrication & Material Handling Equipment | Apex Engineering Chennai",
     description:
-      "Custom MS, SS & Aluminium fabrication, industrial trolleys, working tables, and storage racks — manufactured in Chennai. Get a free quote in 24 hours.",
+      "Custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks - manufactured in Chennai. Get a free quote in 24 hours.",
     images: [
       {
         url: "/hero_industrial_workshop_1775677983634.png",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Industrial Fabrication & Material Handling Equipment | Apex Engineering Chennai",
     description:
-      "Custom MS, SS & Aluminium fabrication in Chennai. Industrial trolleys, working tables, conveyors & more. 10+ years · 500+ projects.",
+      "Custom MS, SS and Aluminium fabrication in Chennai. Industrial trolleys, working tables, conveyors and more. 10+ years, 500+ projects.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };

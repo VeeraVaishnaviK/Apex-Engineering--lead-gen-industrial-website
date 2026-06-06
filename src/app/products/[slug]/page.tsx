@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import ProductContent from "@/components/ProductContent";
 import Schema from "@/components/Schema";
 
-const BASE_URL = "https://apexengineering.vercel.app";
+const BASE_URL = "https://www.apexengineering.org.in";
 
 export async function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));

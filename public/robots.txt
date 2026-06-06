@@ -3,5 +3,24 @@ Allow: /
 Disallow: /_next/
 Disallow: /api/
 
+# AI Search Engine Bots - Explicitly Allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 # Sitemap
-Sitemap: https://apexengineering.vercel.app/sitemap.xml
+Sitemap: https://www.apexengineering.org.in/sitemap.xml

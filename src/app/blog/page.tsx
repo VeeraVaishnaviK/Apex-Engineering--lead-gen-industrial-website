@@ -2,7 +2,7 @@ import { BLOG_POSTS } from "@/data/blogData";
 import Link from "next/link";
 import { Metadata } from "next";
 
-const BASE_URL = "https://apexengineering.vercel.app";
+const BASE_URL = "https://www.apexengineering.org.in";
 
 export const metadata: Metadata = {
   title: "Industrial Engineering Blog — Insights & Guides",

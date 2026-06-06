@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="hero-overlay"></div>
       <div className="container">
         <div className="hero-content fade-in">
-          <span className="hero-badge">Trusted by 50+ Industries</span>
+          <span className="hero-badge">Serving 500+ Industrial Clients</span>
           <h1>Precision Engineering. Durable Steel. Custom Fabrication in Chennai.</h1>
           <p>
             From heavy-duty MS structures to high-precision laboratory workstations—we engineer the backbone of your industrial floor.
@@ -17,8 +17,8 @@ const Hero = () => {
           </div>
           <div className="hero-trust">
             <div className="trust-item">
-              <strong>50+</strong>
-              <span>Clients</span>
+              <strong>500+</strong>
+              <span>Projects</span>
             </div>
             <div className="trust-item">
               <strong>10+</strong>

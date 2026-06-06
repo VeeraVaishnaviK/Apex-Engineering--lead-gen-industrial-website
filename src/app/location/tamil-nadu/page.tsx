@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-const BASE_URL = "https://apexengineering.vercel.app";
+const BASE_URL = "https://www.apexengineering.org.in";
 
 export const metadata: Metadata = {
   title: "Industrial Equipment Manufacturer Tamil Nadu | Apex Engineering",
@@ -45,7 +45,7 @@ const TamilNaduLocationPage = () => {
         <div className="container">
           <h1 style={{ color: 'white' }}>Serving Tamil Nadu's Industrial Corridors</h1>
           <p style={{ color: 'var(--gray-300)', fontSize: '1.25rem' }}>
-            High-performance industrial equipment delivered and installed across the state.
+            Apex Engineering delivers and integrates high-performance industrial equipment across Tamil Nadu, supporting state-wide manufacturing clusters with custom MS, SS, and Aluminium structures.
           </p>
         </div>
       </section>
@@ -54,21 +54,21 @@ const TamilNaduLocationPage = () => {
         <div className="container">
           <div className="grid col-2">
             <div>
-              <h2>Extending Engineering Excellence Beyond Chennai</h2>
+              <h2>Extending Engineering Excellence Across the State</h2>
               <p>
-                Apex Engineering provides robust, custom-fabricated solutions to the major industrial hubs across Tamil Nadu. We understand the specific needs of different regional clusters:
+                With over a decade of fabrication experience, we manufacture and transport customized industrial products directly to your production site. We cater to the specific technical standards of key Tamil Nadu regional clusters:
               </p>
               <ul className="hubs-list">
-                <li><strong>Coimbatore:</strong> Specialized textile machinery frames and custom automation tables.</li>
-                <li><strong>Hosur:</strong> Advanced material handling for the aerospace and automotive manufacturing sector.</li>
-                <li><strong>Madurai & Trichy:</strong> Heavy-duty fabrication for power and sugar industry infrastructures.</li>
-                <li><strong>Tiruppur:</strong> Stainless steel fabrications for the bustling textile processing sector.</li>
+                <li><strong>Coimbatore Industrial Zone:</strong> Heavy-duty machine bases, specialized textile machinery structural frames, and custom automated workbench tables designed for vibration containment.</li>
+                <li><strong>Hosur Manufacturing Hub:</strong> Precision-engineered material handling equipment, assembly-line trolleys, and parts racks built using certified high-gauge IS 2062 mild steel.</li>
+                <li><strong>Tiruppur Textile Belt:</strong> Chemical-grade, corrosion-resistant SS 316 and SS 304 fabrications, storage bins, and custom processing tables built to withstand chemical exposure.</li>
+                <li><strong>Madurai and Trichy Engineering Corridors:</strong> Large-scale industrial shelving, structural platform walkways, and utility carts designed for heavy load-bearing capacities.</li>
               </ul>
             </div>
             <div className="cta-card-local">
               <h3>Statewide Delivery & Setup</h3>
-              <p>We deliver and assemble our industrial units at your doorstep anywhere in Tamil Nadu.</p>
-              <Link href="/contact" className="btn btn-primary">Request Quote</Link>
+              <p>We guarantee safe transport and on-site assembly for our industrial fabrications anywhere in Tamil Nadu within agreed deadlines. All project requests receive CAD blueprint reviews and initial estimates within 24 hours.</p>
+              <Link href="/contact" className="btn btn-primary">Request Free Quote</Link>
             </div>
           </div>
         </div>

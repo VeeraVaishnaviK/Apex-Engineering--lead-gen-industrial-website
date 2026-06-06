@@ -1,4 +1,4 @@
-const BASE_URL = "https://apexengineering.vercel.app";
+const BASE_URL = "https://www.apexengineering.org.in";
 
 type SchemaType = "LocalBusiness" | "WebSite" | "Product" | "FAQPage" | "BreadcrumbList" | "Article";
 

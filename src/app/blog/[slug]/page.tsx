@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import Schema from "@/components/Schema";
 
-const BASE_URL = "https://apexengineering.vercel.app";
+const BASE_URL = "https://www.apexengineering.org.in";
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({ slug: post.slug }));

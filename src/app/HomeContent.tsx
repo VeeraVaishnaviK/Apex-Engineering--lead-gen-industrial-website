@@ -5,6 +5,7 @@ import CategoryGrid from "@/components/CategoryGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import QuoteForm from "@/components/QuoteForm";
 import Link from "next/link";
+import FaqSection from "@/components/FaqSection";
 
 export default function HomeContent() {
   return (
@@ -68,6 +69,8 @@ export default function HomeContent() {
           </div>
         </div>
       </section>
+
+      <FaqSection />
 
       {/* Lead Capture Section */}
       <section className="section bg-light" id="quote">
