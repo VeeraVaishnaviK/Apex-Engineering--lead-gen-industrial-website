@@ -1,8 +1,39 @@
 import { Metadata } from "next";
 
+const BASE_URL = "https://apexengineering.vercel.app";
+
 export const metadata: Metadata = {
-  title: "About Apex Engineering | Industrial Excellence in Chennai",
-  description: "Learn about Apex Engineering, our 10+ years of expertise in industrial fabrication, and our commitment to quality and custom engineering solutions.",
+  title: "About Apex Engineering | 10+ Years of Industrial Excellence in Chennai",
+  description:
+    "Learn about Apex Engineering — 10+ years of industrial fabrication expertise in Chennai. 500+ projects delivered across Tamil Nadu in MS, SS & Aluminium manufacturing.",
+  alternates: { canonical: `${BASE_URL}/about` },
+  keywords: [
+    "about Apex Engineering",
+    "industrial fabrication company Chennai",
+    "MS SS Aluminium manufacturer Tamil Nadu",
+    "Rampuram fabrication unit",
+  ],
+  openGraph: {
+    title: "About Apex Engineering | Industrial Fabrication Experts in Chennai",
+    description:
+      "10+ years, 500+ projects, 50+ clients — Apex Engineering is Chennai's trusted partner for custom MS, SS & Aluminium industrial fabrication.",
+    url: `${BASE_URL}/about`,
+    images: [
+      {
+        url: "/industrial_facility_about_1775678115255.png",
+        width: 1200,
+        height: 630,
+        alt: "Apex Engineering manufacturing facility in Chennai",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Apex Engineering | Chennai Fabrication Experts",
+    description:
+      "10+ years of MS/SS/Aluminium fabrication excellence in Chennai. 500+ projects delivered.",
+    images: ["/industrial_facility_about_1775678115255.png"],
+  },
 };
 
 const AboutPage = () => {

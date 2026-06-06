@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap
 Sitemap: https://apexengineering.vercel.app/sitemap.xml
