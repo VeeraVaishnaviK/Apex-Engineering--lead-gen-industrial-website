@@ -76,6 +76,7 @@ export default function ProductContent({ product, relatedProducts }: any) {
                 href={`https://wa.me/917200811328?text=Hi Apex Engineering, I'm interested in ${product.name}. Please share the price and details.`} 
                 className="btn btn-primary w-full"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Inquiry via WhatsApp
               </a>
@@ -113,6 +114,7 @@ export default function ProductContent({ product, relatedProducts }: any) {
           href={`https://wa.me/917200811328?text=Hi Apex Engineering, I'm interested in ${product.name}. Please share the price and details.`} 
           className="btn btn-primary w-full"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Enquire on WhatsApp
         </a>

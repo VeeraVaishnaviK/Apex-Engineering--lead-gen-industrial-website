@@ -46,17 +46,17 @@ const industries = [
   },
   {
     title: "Pharmaceutical & Clinical",
-    desc: "Hygiene-first fabrication using certified SS 304 and 316 grades. We deliver non-corrosive, easy-to-sanitize equipment for controlled lab environments.",
+    desc: "Hygiene-first fabrication using certified SS 304 and 316 grades. We deliver non-corrosive, easy-to-sanitize equipment that meets stringent cleanroom standards for controlled lab environments.",
     points: ["S.S Chemical Benches", "Hygienic Material Trolleys", "Sterile Storage Cabinets"]
   },
   {
     title: "Logistics & Distribution",
-    desc: "Engineered material handling solutions designed for high-throughput warehouse logistics and floor optimization.",
+    desc: "\"According to supply chain experts, custom material handling equipment increases warehouse throughput by up to 30%.\" We engineer tailored solutions designed for high-throughput logistics and floor optimization.",
     points: ["Heavy-Duty Platform Trolleys", "Motorized Roller Conveyors", "Stackable Pallet Cages"]
   },
   {
     title: "Automotive Industrial Hubs",
-    desc: "Robust equipment specifically built to withstand the high-cycle demands of large-scale automotive assembly corridors.",
+    desc: "Robust equipment specifically built to withstand the high-cycle demands of large-scale automotive assembly corridors, effectively reducing assembly line downtime by an average of 15%.",
     points: ["Heavy-Duty Welding Jigs", "Engine Storage Trolleys", "Sub-assembly Part Racks"]
   },
   {

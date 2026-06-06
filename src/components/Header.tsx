@@ -31,7 +31,7 @@ const Header = () => {
           </div>
 
           <div className="nav-cta">
-            <a href="https://wa.me/917200811328" target="_blank" className="btn btn-primary">
+            <a href="https://wa.me/917200811328" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Get Quote
             </a>
             <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>

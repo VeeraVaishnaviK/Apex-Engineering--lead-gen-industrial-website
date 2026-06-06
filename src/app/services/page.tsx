@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import FaqSection from "@/components/FaqSection";
 
 const BASE_URL = "https://www.apexengineering.org.in";
 
@@ -43,22 +44,22 @@ const services = [
   {
     id: "industrial-fabrication",
     title: "Project-Based Industrial Fabrication",
-    desc: "We specialize in the fabrication of robust MS, SS, and Aluminium structures tailored for manufacturing units and large-scale industrial plants. Our team handles everything from structural support frames to custom utility enclosures."
+    desc: "We specialize in the fabrication of robust MS (IS 2062 compliant), SS (304/316 food-grade), and Aluminium structures. Our team handles everything from structural support frames with load capacities up to 10 tons to custom utility enclosures."
   },
   {
     id: "welding-works",
     title: "Precision Welding — TIG, MIG & Arc",
-    desc: "Standard-certified welding services ensuring high structural integrity and fatigue resistance. We provide specialized welding solutions for heavy-gauge sections and high-precision stainless steel assemblies."
+    desc: "ISO 9001:2015 standard-certified welding services ensuring high structural integrity and fatigue resistance. We provide specialized welding solutions for heavy-gauge sections (up to 50mm thickness) and high-precision stainless steel assemblies."
   },
   {
     id: "sheet-metal",
     title: "Precision Sheet Metal Work",
-    desc: "Advanced folding, bending, and laser-consistent cutting for industrial panels, ducts, and machine components. We maintain tight tolerances to ensure perfect fitment for your assemblies."
+    desc: "Advanced folding, bending, and laser-consistent cutting for industrial panels and ducts. We maintain tight tolerances of ±0.1mm to ensure perfect fitment for your assemblies."
   },
   {
     id: "aluminium-extrusion",
     title: "Modular Aluminium Profile Systems",
-    desc: "Lightweight, high-strength T-slot and V-slot aluminium profile assembly. Ideal for modular workstations, laboratory frames, and rapid-deployment production units."
+    desc: "Lightweight, high-strength T-slot and V-slot aluminium profile assembly. Ideal for modular workstations, laboratory frames, and rapid-deployment production units, reducing assembly time by 40%."
   },
   {
     id: "surface-finishing",
@@ -89,6 +90,8 @@ const ServicesPage = () => {
           </div>
         ))}
       </div>
+
+      <FaqSection />
 
       <div className="cta-banner section">
         <div className="container bg-navy text-white text-center">
