@@ -37,12 +37,14 @@ const Footer = () => {
           <div className="footer-map">
             <h3>Our Location</h3>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1234!2d80.17!3d13.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAxJzEyLjAiTiA4MMKwMTAnMTIuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3630751913584!2d80.17459!3d13.030553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260db58e1e92b%3A0x5e33dda7bae2c92!2sRamapuram%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               width="100%" 
               height="150" 
               style={{ border: 0, borderRadius: '8px' }} 
               allowFullScreen 
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Apex Engineering Location - Ramapuram, Chennai"
             ></iframe>
           </div>
         </div>

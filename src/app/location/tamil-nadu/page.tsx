@@ -56,7 +56,7 @@ const TamilNaduLocationPage = () => {
             <div>
               <h2>Extending Engineering Excellence Across the State</h2>
               <p>
-                With over a decade of fabrication experience, we manufacture and transport customized industrial products directly to your production site. We cater to the specific technical standards of key Tamil Nadu regional clusters:
+                With over 3 years of fabrication experience, we manufacture and transport customized industrial products directly to your production site. We cater to the specific technical standards of key Tamil Nadu regional clusters:
               </p>
               <ul className="hubs-list">
                 <li><strong>Coimbatore Industrial Zone:</strong> Heavy-duty machine bases, specialized textile machinery structural frames, and custom automated workbench tables designed for vibration containment.</li>

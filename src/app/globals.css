@@ -535,6 +535,10 @@ p {
   font-size: 1.5rem;
 }
 
+.category-box-icon svg {
+  color: var(--white);
+}
+
 .category-box-title {
   color: var(--white) !important;
   font-size: 1.25rem;
@@ -727,7 +731,8 @@ p {
 .industry-box:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .industry-content { padding: 2.5rem; }
 .points { list-style: none; padding: 0; }
-.points li { margin-bottom: 0.5rem; }
+.points li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+.points li::before { content: ''; position: absolute; left: 0; top: 0.4em; width: 10px; height: 6px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
 
 /* Services Page */
 .services-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
@@ -801,7 +806,7 @@ p {
 .quote-content h2 { margin-bottom: 1rem; }
 .trust-points { margin: 2rem 0; }
 .trust-points li { margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; font-weight: 600; }
-.trust-points li::before { content: '✓'; color: var(--accent); font-weight: 900; }
+.trust-points li::before { content: ''; display: inline-block; width: 10px; height: 6px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); margin-right: 0.5rem; }
 .benefit-box { background: var(--white); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow); }
 
 /* Blog Detail */

@@ -5,11 +5,11 @@ import { useState, useEffect } from 'react';
 const LeadPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    requirements: ''
   });
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const LeadPopup = () => {
     localStorage.setItem('leadPopupDismissed', 'true');
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -38,24 +38,34 @@ const LeadPopup = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
     // Save lead to database
     try {
-      await fetch('/api/leads', {
+      const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, source: 'popup' }),
       });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        setError(data.error || 'Failed to submit. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
     } catch {
-      // Silently fail — still redirect to WhatsApp
+      setError('Network error. Please check your connection and try again.');
+      setIsSubmitting(false);
+      return;
     }
     
     // Construct WhatsApp message
     const message = `Hi Apex Engineering, I'm interested in your services.
 Name: ${formData.name}
 Phone: ${formData.phone}
-Email: ${formData.email}
-Requirements: ${formData.requirements}`;
+Email: ${formData.email}`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/917200811328?text=${encodedMessage}`;
@@ -78,7 +88,7 @@ Requirements: ${formData.requirements}`;
         
         <div className="lead-popup-header">
           <h2>Get a Custom Quote</h2>
-          <p>Share your requirements and our technical team will get back to you within 24 hours.</p>
+          <p>Share your details and our technical team will get back to you within 24 hours.</p>
         </div>
 
         <form className="lead-form" onSubmit={handleSubmit}>
@@ -124,21 +134,23 @@ Requirements: ${formData.requirements}`;
             />
           </div>
 
-          <div className="lead-form-group">
-            <label htmlFor="requirements">Tell us what you need</label>
-            <textarea 
-              id="requirements" 
-              name="requirements" 
-              className="lead-input lead-textarea" 
-              placeholder="Example: I need 5 industrial trolleys with 500kg capacity..." 
-              required
-              value={formData.requirements}
-              onChange={handleChange}
-            ></textarea>
-          </div>
+          {error && (
+            <div style={{
+              background: '#fef2f2',
+              border: '1px solid #fecaca',
+              color: '#991b1b',
+              padding: '0.75rem 1rem',
+              borderRadius: '8px',
+              marginBottom: '0.5rem',
+              fontSize: '0.85rem',
+              lineHeight: '1.4',
+            }}>
+              {error}
+            </div>
+          )}
 
           <button type="submit" className="lead-submit-btn" disabled={isSubmitting}>
-            {isSubmitting ? 'Submitting...' : 'Submit Requirements'}
+            {isSubmitting ? 'Submitting...' : 'Get Quote via WhatsApp'}
           </button>
         </form>
       </div>

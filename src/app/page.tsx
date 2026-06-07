@@ -4,7 +4,7 @@ import HomeContent from "./HomeContent";
 export const metadata: Metadata = {
   title: "Industrial Fabrication & Material Handling Equipment Chennai",
   description:
-    "Apex Engineering Chennai - custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks. 10+ years of expertise, 500+ projects delivered, and free quote in 24 hours.",
+    "Apex Engineering Chennai - custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks. 3+ years of expertise, 500+ projects delivered, and free quote in 24 hours.",
   alternates: { canonical: "https://www.apexengineering.org.in" },
   openGraph: {
     title: "Industrial Fabrication & Material Handling Equipment | Apex Engineering Chennai",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Industrial Fabrication & Material Handling | Apex Engineering Chennai",
     description:
-      "Custom fabrication in Chennai - trolleys, working tables, conveyors and more. 10+ years, 500+ projects.",
+      "Custom fabrication in Chennai - trolleys, working tables, conveyors and more. 3+ years, 500+ projects.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };

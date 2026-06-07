@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Apex Engineering Chennai",
   },
   description:
-    "Apex Engineering Chennai - trusted partner for custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks. 10+ years, 500+ projects, Chennai-wide delivery.",
+    "Apex Engineering Chennai - trusted partner for custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks. 3+ years, 500+ projects, Chennai-wide delivery.",
   keywords: [
     "Industrial trolley manufacturer Chennai",
     "MS fabrication Chennai",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Industrial Fabrication & Material Handling Equipment | Apex Engineering Chennai",
     description:
-      "Custom MS, SS and Aluminium fabrication in Chennai. Industrial trolleys, working tables, conveyors and more. 10+ years, 500+ projects.",
+      "Custom MS, SS and Aluminium fabrication in Chennai. Industrial trolleys, working tables, conveyors and more. 3+ years, 500+ projects.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };

@@ -86,7 +86,7 @@ const IndustriesPage = () => {
               <h3>{ind.title}</h3>
               <p>{ind.desc}</p>
               <ul className="points">
-                {ind.points.map((p, j) => <li key={j}>✓ {p}</li>)}
+                {ind.points.map((p, j) => <li key={j}>{p}</li>)}
               </ul>
             </div>
           </div>

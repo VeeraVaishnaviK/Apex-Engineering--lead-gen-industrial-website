@@ -46,7 +46,7 @@ const ChennaiLocationPage = () => {
         <div className="container">
           <h1 style={{ color: 'white' }}>Industrial Fabrication Solutions in Chennai</h1>
           <p style={{ color: 'var(--gray-300)', fontSize: '1.25rem' }}>
-            Apex Engineering is Chennai's trusted partner for custom mild steel (MS), stainless steel (SS), and aluminium fabrication, serving key industrial corridors with 10+ years of expertise and over 500 successfully completed projects.
+            Apex Engineering is Chennai's trusted partner for custom mild steel (MS), stainless steel (SS), and aluminium fabrication, serving key industrial corridors with 3+ years of expertise and over 500 successfully completed projects.
           </p>
         </div>
       </section>

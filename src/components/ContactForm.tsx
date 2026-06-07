@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -25,6 +26,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError("");
 
     try {
       const res = await fetch("/api/leads", {
@@ -33,14 +35,18 @@ export default function ContactForm() {
         body: JSON.stringify({ ...formData, source: "contact_page" }),
       });
 
-      if (res.ok) {
+      const data = await res.json();
+
+      if (res.ok && data.success) {
         setSubmitted(true);
+      } else {
+        setError(data.error || "Something went wrong. Please try again or call us directly.");
       }
     } catch {
-      // continue regardless
+      setError("Network error. Please check your connection and try again, or call us at +91 89253 01739.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
   };
 
   if (submitted) {
@@ -147,6 +153,20 @@ export default function ContactForm() {
             onChange={handleChange}
           ></textarea>
         </div>
+        {error && (
+          <div style={{
+            background: '#fef2f2',
+            border: '1px solid #fecaca',
+            color: '#991b1b',
+            padding: '0.75rem 1rem',
+            borderRadius: '8px',
+            marginBottom: '1rem',
+            fontSize: '0.9rem',
+            lineHeight: '1.5',
+          }}>
+            {error}
+          </div>
+        )}
         <button
           type="submit"
           className="btn btn-primary w-full"

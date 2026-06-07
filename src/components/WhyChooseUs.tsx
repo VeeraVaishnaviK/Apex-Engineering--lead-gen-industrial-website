@@ -17,12 +17,14 @@ const WhyChooseUs = () => {
             <span className="subtitle">The Apex Advantage</span>
             <h2>Why Industrial Leaders Choose Apex Engineering?</h2>
             <p>
-              With over a decade of experience in industrial fabrication, we've built a reputation for excellence. We don't just supply products; we provide solutions that enhance your workflow efficiency.
+              With over 3 years of experience in industrial fabrication, we've built a reputation for excellence. We don't just supply products; we provide solutions that enhance your workflow efficiency.
             </p>
             <div className="reasons-list">
               {reasons.map((r, i) => (
                 <div key={i} className="reason-item">
-                  <div className="reason-tick">✓</div>
+                  <div className="reason-tick">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
                   <div>
                     <h4>{r.title}</h4>
                     <p>{r.desc}</p>
@@ -33,10 +35,9 @@ const WhyChooseUs = () => {
           </div>
           <div className="image-side">
             <div className="experience-badge">
-              <strong>10+</strong>
+              <strong>3+</strong>
               <span>Years of Expertise</span>
             </div>
-            <img src="/images/hero.png" alt="Industrial Excellence" className="side-img" />
           </div>
         </div>
       </div>

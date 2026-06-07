@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function QuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -24,10 +25,11 @@ export default function QuoteForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError("");
 
-    // Save lead to database
+    // Save lead to database first
     try {
-      await fetch("/api/leads", {
+      const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -38,11 +40,21 @@ export default function QuoteForm() {
           source: "home_page",
         }),
       });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        setError(data.error || "Failed to submit. Please try again.");
+        setIsSubmitting(false);
+        return;
+      }
     } catch {
-      // Silently continue to WhatsApp
+      setError("Network error. Please check your connection and try again.");
+      setIsSubmitting(false);
+      return;
     }
 
-    // Build WhatsApp message
+    // Build WhatsApp message (only after successful DB save)
     const message = `Hi Apex Engineering, I'd like a quote.
 Name: ${formData.name}
 Phone: ${formData.phone}
@@ -118,6 +130,20 @@ Requirements: ${formData.requirements}`;
           onChange={handleChange}
         ></textarea>
       </div>
+      {error && (
+        <div style={{
+          background: '#fef2f2',
+          border: '1px solid #fecaca',
+          color: '#991b1b',
+          padding: '0.75rem 1rem',
+          borderRadius: '8px',
+          marginBottom: '0.75rem',
+          fontSize: '0.85rem',
+          lineHeight: '1.4',
+        }}>
+          {error}
+        </div>
+      )}
       <button
         type="submit"
         className="btn btn-primary w-full"

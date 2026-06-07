@@ -36,6 +36,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true, data: lead }, { status: 201 });
   } catch (err: unknown) {
+    console.error("[API /api/leads POST] Error:", err);
     const message = err instanceof Error ? err.message : "Server error";
     return NextResponse.json(
       { success: false, error: message },

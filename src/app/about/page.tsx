@@ -3,9 +3,9 @@ import { Metadata } from "next";
 const BASE_URL = "https://www.apexengineering.org.in";
 
 export const metadata: Metadata = {
-  title: "About Apex Engineering | 10+ Years of Industrial Excellence in Chennai",
+  title: "About Apex Engineering | 3+ years of Industrial Excellence in Chennai",
   description:
-    "Learn about Apex Engineering — 10+ years of industrial fabrication expertise in Chennai. 500+ projects delivered across Tamil Nadu in MS, SS & Aluminium manufacturing.",
+    "Learn about Apex Engineering — 3+ years of industrial fabrication expertise in Chennai. 500+ projects delivered across Tamil Nadu in MS, SS & Aluminium manufacturing.",
   alternates: { canonical: `${BASE_URL}/about` },
   keywords: [
     "about Apex Engineering",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Apex Engineering | Industrial Fabrication Experts in Chennai",
     description:
-      "10+ years, 500+ projects, 50+ clients — Apex Engineering is Chennai's trusted partner for custom MS, SS & Aluminium industrial fabrication.",
+      "3+ years, 500+ projects, 50+ clients — Apex Engineering is Chennai's trusted partner for custom MS, SS & Aluminium industrial fabrication.",
     url: `${BASE_URL}/about`,
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Apex Engineering | Chennai Fabrication Experts",
     description:
-      "10+ years of MS/SS/Aluminium fabrication excellence in Chennai. 500+ projects delivered.",
+      "3+ years of MS/SS/Aluminium fabrication excellence in Chennai. 500+ projects delivered.",
     images: ["/industrial_facility_about_1775678115255.png"],
   },
 };
@@ -42,7 +42,7 @@ const AboutPage = () => {
       <section className="section bg-light">
         <div className="container text-center">
           <span className="subtitle">Our Legacy</span>
-          <h1>A Decade of Engineering Precision</h1>
+          <h1>Years of Engineering Precision</h1>
           <p className="lead-text">
             Apex Engineering was established to bridge the gap between complex industrial requirements and high-durability metal fabrication. Operating from the heart of Chennai's manufacturing zone, we provide technical-grade solutions for India's growing industrial infrastructure.
           </p>
@@ -55,7 +55,7 @@ const AboutPage = () => {
             <div className="content">
               <h2>Who We Are</h2>
               <p>
-                Based in the heart of Chennai, Apex Engineering is a leading manufacturer specializing in industrial fabrication across MS, SS, and Aluminium. Over the last decade, we have successfully partnered with over 50 businesses across Tamil Nadu, delivering everything from simple workbenches to complex industrial cabins.
+                Based in the heart of Chennai, Apex Engineering is a leading manufacturer specializing in industrial fabrication across MS, SS, and Aluminium. Over the last 3 years, we have successfully partnered with over 50 businesses across Tamil Nadu, delivering everything from simple workbenches to complex industrial cabins.
               </p>
               <p>
                 Our expertise lies in understanding the unique challenges of different industries—be it the hygiene requirements of a pharmaceutical lab or the heavy-duty demands of an automotive assembly line.
@@ -90,10 +90,10 @@ const AboutPage = () => {
                 Our manufacturing unit in Rampuram, Chennai, is equipped with state-of-the-art welding, cutting, and finishing equipment. We maintain a lean production environment to ensure maximal efficiency and quality control across every project.
               </p>
               <ul className="points">
-                <li>✓ Advanced TIG/MIG Welding Stations</li>
-                <li>✓ Precision Sheet Metal Bending & Cutting</li>
-                <li>✓ Dedicated Quality Control Zone</li>
-                <li>✓ In-house Powder Coating Facility</li>
+                <li>Advanced TIG/MIG Welding Stations</li>
+                <li>Precision Sheet Metal Bending & Cutting</li>
+                <li>Dedicated Quality Control Zone</li>
+                <li>In-house Powder Coating Facility</li>
               </ul>
             </div>
           </div>
@@ -104,7 +104,7 @@ const AboutPage = () => {
         <div className="container">
           <div className="grid col-4 stats">
             <div className="stat-item">
-              <strong>10+</strong>
+              <strong>3+</strong>
               <span>Years of Expertise</span>
             </div>
             <div className="stat-item">

@@ -21,7 +21,7 @@ const Hero = () => {
               <span>Projects</span>
             </div>
             <div className="trust-item">
-              <strong>10+</strong>
+              <strong>3+</strong>
               <span>Years</span>
             </div>
             <div className="trust-item">
