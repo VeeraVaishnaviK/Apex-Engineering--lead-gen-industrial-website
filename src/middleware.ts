@@ -31,8 +31,8 @@ export function middleware(request: NextRequest) {
       return NextResponse.next();
     }
 
-    // Optional Password Protection: enabled if ADMIN_PASSWORD is set in environment
-    const adminPassword = process.env.ADMIN_PASSWORD;
+    // Password Protection: enabled by default with fallback, or customizable via environment
+    const adminPassword = process.env.ADMIN_PASSWORD || 'apexadmin123';
     if (adminPassword) {
       const authHeader = request.headers.get('authorization');
       
