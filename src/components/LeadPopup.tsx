@@ -13,21 +13,15 @@ const LeadPopup = () => {
   });
 
   useEffect(() => {
-    // Check if user has already dismissed or submitted the popup
-    const isPopupDismissed = localStorage.getItem('leadPopupDismissed');
-    
-    if (!isPopupDismissed) {
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 3000); // 3 second delay
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000); // 3 second delay
 
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
     setIsVisible(false);
-    localStorage.setItem('leadPopupDismissed', 'true');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,10 +67,9 @@ Email: ${formData.email}`;
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
     
-    // Close popup and mark as dismissed
+    // Close popup
     setIsSubmitting(false);
     setIsVisible(false);
-    localStorage.setItem('leadPopupDismissed', 'true');
   };
 
   if (!isVisible) return null;
