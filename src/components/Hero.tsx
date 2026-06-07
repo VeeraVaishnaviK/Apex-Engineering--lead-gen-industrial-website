@@ -3,6 +3,16 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <section className="hero">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="hero-video"
+        poster="/hero_industrial_workshop_1775677983634.png"
+      >
+        <source src="/55.mp4" type="video/mp4" />
+      </video>
       <div className="hero-overlay"></div>
       <div className="container">
         <div className="hero-content fade-in">

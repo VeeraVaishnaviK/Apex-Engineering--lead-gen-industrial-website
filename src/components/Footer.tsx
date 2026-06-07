@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Apex Engineering. All rights reserved. | Optimized by Expert SEO</p>
+          <p>&copy; {new Date().getFullYear()} Apex Engineering. All rights reserved. | Developed by Lin&apos;s Infotech Company Ltd.</p>
         </div>
       </div>
     </footer>
