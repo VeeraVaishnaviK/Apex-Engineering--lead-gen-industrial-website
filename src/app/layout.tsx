@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import LayoutBody from "@/components/LayoutBody";
 import Schema from "@/components/Schema";
@@ -61,11 +62,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const isAdmin = headersList.get("x-is-admin") === "true";
+
   return (
     <html lang="en-IN">
       <head>
@@ -77,7 +81,7 @@ export default function RootLayout({
       <body>
         <Schema type="LocalBusiness" data={{}} />
         <Schema type="WebSite" data={{}} />
-        <LayoutBody>{children}</LayoutBody>
+        <LayoutBody isAdminServer={isAdmin}>{children}</LayoutBody>
       </body>
     </html>
   );

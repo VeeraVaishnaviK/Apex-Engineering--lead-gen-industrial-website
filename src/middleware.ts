@@ -68,8 +68,22 @@ export function middleware(request: NextRequest) {
     // Rewrite the subdomain root `/` request internally to `/admin/leads`
     if (path === '/') {
       url.pathname = '/admin/leads';
-      return NextResponse.rewrite(url);
+      const requestHeaders = new Headers(request.headers);
+      requestHeaders.set('x-is-admin', 'true');
+      return NextResponse.rewrite(url, {
+        request: {
+          headers: requestHeaders,
+        }
+      });
     }
+
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-is-admin', 'true');
+    return NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      }
+    });
   }
 
   return NextResponse.next();

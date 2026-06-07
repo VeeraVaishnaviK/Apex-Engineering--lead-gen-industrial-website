@@ -8,13 +8,14 @@ import WhatsAppFloating from "@/components/WhatsAppFloating";
 
 interface LayoutBodyProps {
   children: React.ReactNode;
+  isAdminServer?: boolean;
 }
 
-export default function LayoutBody({ children }: LayoutBodyProps) {
+export default function LayoutBody({ children, isAdminServer }: LayoutBodyProps) {
   const pathname = usePathname();
   
-  // Check if we are on the admin path
-  const isAdmin = pathname.startsWith("/admin") || pathname === "/admin";
+  // Check if we are on the admin path or subdomain
+  const isAdmin = isAdminServer || pathname.startsWith("/admin") || pathname === "/admin";
 
   if (isAdmin) {
     return <main>{children}</main>;
