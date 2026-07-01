@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="public/logo.jpg" alt="Apex Engineering Logo" width="250" />
+
 # Apex Engineering
 
 An enterprise-grade, high-performance, and fully SEO-optimized B2B industrial fabrication corporate website designed for lead generation, built on modern web architecture.
