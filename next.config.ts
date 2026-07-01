@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'SAMEORIGIN',
           },
           {
             key: 'X-Content-Type-Options',
@@ -21,6 +21,27 @@ const nextConfig: NextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'geolocation=(), microphone=(), camera=()',
+          },
+        ],
+      },
+      {
+        source: '/(.*)\\.(jpg|jpeg|png|webp|avif|gif|ico|svg|mp4)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },

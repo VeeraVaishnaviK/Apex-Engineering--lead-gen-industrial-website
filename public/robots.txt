@@ -2,6 +2,20 @@ User-agent: *
 Allow: /
 Disallow: /_next/
 Disallow: /api/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+Disallow: /?s=
+Disallow: /search/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Disallow: /cdn-cgi/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
 
 # AI Search Engine Bots - Explicitly Allowed
 User-agent: GPTBot
@@ -22,5 +36,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# Sitemap
-Sitemap: https://www.apexengineering.org.in/sitemap.xml
+# Sitemap location
+Sitemap: https://apexengineering.org.in/sitemap.xml

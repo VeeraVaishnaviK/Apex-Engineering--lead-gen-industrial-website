@@ -1,20 +1,32 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-export default function ProductContent({ product, relatedProducts }: any) {
+export default function ProductContent({ product, relatedProducts, allFaqs = [] }: any) {
+  const BASE_URL = "https://apexengineering.org.in";
+
   return (
     <div className="product-detail-page">
       <div className="container section">
-        <nav className="breadcrumb">
-          <Link href="/">Home</Link> / <Link href="/products">Products</Link> / <span>{product.name}</span>
-        </nav>
+        <Breadcrumbs items={[
+          { name: "Products", url: "/products" },
+          { name: product.name, url: `/products/${product.slug}` }
+        ]} />
 
         <div className="main-layout">
           <div className="content-side">
             <div className="image-gallery">
               <div className="main-image">
-                <img src={product.images[0] || '/images/hero.png'} alt={product.name} />
+                <Image
+                  src={product.images[0] || "/hero_industrial_workshop_1775677983634.png"}
+                  alt={product.name}
+                  width={800}
+                  height={500}
+                  priority
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
             </div>
 
@@ -22,21 +34,26 @@ export default function ProductContent({ product, relatedProducts }: any) {
               <h1>{product.name}</h1>
               <p className="hook">{product.shortHook}</p>
               <div className="rich-content">
-                <h2>Product Overview</h2>
-                <p>{product.description}</p>
+                <h2>What is {product.name}?</h2>
+                <p>
+                  A <strong>{product.name}</strong> manufactured by Apex Engineering is a high-durability, industrial-grade solution designed to streamline factory operations, improve ergonomics, and optimize material handling. Built at our specialized Chennai workshop, each unit is constructed utilizing certified steel profiles and heavy-duty structural components. Our engineering process focuses on load-bearing integrity, structural rigidity, and customized functional layouts to meet the rigorous demands of modern manufacturing facilities.
+                </p>
+                <p style={{ marginTop: "1rem" }}>
+                  {product.description}
+                </p>
                 
                 <h3>Key Features</h3>
                 <ul>
                   {product.features.map((f: string, i: number) => <li key={i}>{f}</li>)}
                 </ul>
 
-                <h3>Specifications</h3>
+                <h3>Technical Specifications</h3>
                 <div className="specs-table-wrapper">
                   <table className="specs-table">
                     <tbody>
                       {Object.entries(product.specifications).map(([key, val]: any) => (
                         <tr key={key}>
-                          <th>{key}</th>
+                          <th scope="row">{key}</th>
                           <td>{val}</td>
                         </tr>
                       ))}
@@ -44,20 +61,33 @@ export default function ProductContent({ product, relatedProducts }: any) {
                   </table>
                 </div>
 
-                {product.useCases && product.useCases.length > 0 && (
-                  <>
-                    <h3>Typical Applications</h3>
-                    <ul>
-                      {product.useCases.map((u: string, i: number) => <li key={i}>{u}</li>)}
-                    </ul>
-                  </>
-                )}
+                <h3>Industries We Serve</h3>
+                <p style={{ marginBottom: "1rem" }}>
+                  Our custom-built <strong>{product.name}</strong> assemblies are deployed across key B2B sectors in Chennai and the wider Tamil Nadu region, optimized for structural safety and process layouts:
+                </p>
+                <ul style={{ marginBottom: "2rem" }}>
+                  <li><strong>Automotive & Ancillaries:</strong> Industrial shop floor assemblies built to support heavy tooling and components.</li>
+                  <li><strong>Pharmaceutical & Laboratories:</strong> Cleanroom-grade configurations matching clean zone classifications.</li>
+                  <li><strong>Logistics & Warehousing:</strong> Material handling items designed for warehouse storage and sorting.</li>
+                  <li><strong>General Engineering:</strong> Sturdy frames, supports, and fixtures for standard manufacturing.</li>
+                </ul>
+
+                <h3>Why Choose Apex Engineering for {product.name}?</h3>
+                <p style={{ marginBottom: "1rem" }}>
+                  Apex Engineering delivers high-integrity B2B equipment designed to optimize space and ensure operational durability. By selecting us for your <strong>{product.name}</strong> requirements, you get:
+                </p>
+                <ul>
+                  <li><strong>Compliant Engineering:</strong> Fabrication complying strictly with IS 2062 steel standards.</li>
+                  <li><strong>Full Layout Customization:</strong> Tailored sizes, shelf capacities, sheet gauges, and drawer modules.</li>
+                  <li><strong>Local Chennai Facility:</strong> Immediate CAD approvals and prototyping at our Rampuram unit.</li>
+                  <li><strong>Statewide Setup:</strong> Safe packaging, transport, and on-site fitting across Tamil Nadu.</li>
+                </ul>
               </div>
 
-              {product.faqs && product.faqs.length > 0 && (
+              {allFaqs.length > 0 && (
                 <div className="faq-section">
                   <h3>Frequently Asked Questions</h3>
-                  {product.faqs.map((faq: any, i: number) => (
+                  {allFaqs.map((faq: any, i: number) => (
                     <div key={i} className="faq-item">
                       <h4>{faq.question}</h4>
                       <p>{faq.answer}</p>
@@ -102,7 +132,14 @@ export default function ProductContent({ product, relatedProducts }: any) {
                 <div className="related-list">
                   {relatedProducts.map((rp: any) => (
                     <Link href={`/products/${rp.slug}`} key={rp.id} className="related-item">
-                      <img src={rp.images[0] || '/images/hero.png'} alt={rp.name} />
+                      <Image
+                        src={rp.images[0] || "/hero_industrial_workshop_1775677983634.png"}
+                        alt={rp.name}
+                        width={70}
+                        height={70}
+                        style={{ objectFit: "cover", borderRadius: "8px" }}
+                        loading="lazy"
+                      />
                       <div>
                         <h4>{rp.name}</h4>
                         <span>View Details</span>

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const WhyChooseUs = () => {
   const reasons = [
     { title: "Precision Fabrication", desc: "Technical blueprints translated into sub-millimeter accurate MS, SS, and Aluminium structures." },
@@ -17,7 +19,7 @@ const WhyChooseUs = () => {
             <span className="subtitle">The Apex Advantage</span>
             <h2>Why Industrial Leaders Choose Apex Engineering?</h2>
             <p>
-              With over 3 years of experience in industrial fabrication, we've built a reputation for excellence. We don't just supply products; we provide solutions that enhance your workflow efficiency.
+              With over 3 years of experience in industrial fabrication, we've built a reputation for excellence. Learn more about <Link href="/about/" style={{ color: "var(--accent)", textDecoration: "underline", fontWeight: 600 }}>our Chennai manufacturing history</Link> and how we provide custom engineering solutions that enhance your workflow efficiency.
             </p>
             <div className="reasons-list">
               {reasons.map((r, i) => (

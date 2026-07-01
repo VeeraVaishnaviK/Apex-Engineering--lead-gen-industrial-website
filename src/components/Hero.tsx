@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content fade-in">
           <span className="hero-badge">Serving 500+ Industrial Clients</span>
-          <h1>Precision Engineering. Durable Steel. Custom Fabrication in Chennai.</h1>
+          <h1>Precision Industrial Fabrication Company in Chennai</h1>
           <p>
             From heavy-duty MS structures to high-precision laboratory workstations—we engineer the backbone of your industrial floor.
           </p>
