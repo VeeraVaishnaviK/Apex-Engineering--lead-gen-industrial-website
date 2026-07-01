@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import HomeContent from "./HomeContent";
 
 export const metadata: Metadata = {
-  title: "Industrial Fabrication & Material Handling Equipment Chennai",
+  title: "Industrial Fabrication Company Chennai",
   description:
-    "Apex Engineering Chennai - custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks. 3+ years of expertise, 500+ projects delivered, and free quote in 24 hours.",
-  alternates: { canonical: "https://www.apexengineering.org.in" },
+    "Apex Engineering is a leading industrial fabrication company in Chennai. We manufacture custom MS, SS & aluminium structures. Request a free quote today.",
+  alternates: { canonical: "https://apexengineering.org.in/" },
   openGraph: {
-    title: "Industrial Fabrication & Material Handling Equipment | Apex Engineering Chennai",
+    title: "Industrial Fabrication Company Chennai | Apex Engineering",
     description:
-      "Custom MS, SS and Aluminium fabrication in Chennai. Industrial trolleys, working tables, storage racks, roller conveyors. Get a free quote in 24 hours.",
-    url: "https://www.apexengineering.org.in",
+      "Apex Engineering is a leading industrial fabrication company in Chennai. We manufacture custom MS, SS & aluminium structures. Request a free quote today.",
+    url: "https://apexengineering.org.in/",
     images: [
       {
         url: "/hero_industrial_workshop_1775677983634.png",
@@ -22,13 +22,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Fabrication & Material Handling | Apex Engineering Chennai",
+    title: "Industrial Fabrication Company Chennai | Apex Engineering",
     description:
-      "Custom fabrication in Chennai - trolleys, working tables, conveyors and more. 3+ years, 500+ projects.",
+      "Apex Engineering is a leading industrial fabrication company in Chennai. We manufacture custom MS, SS & aluminium structures. Request a free quote today.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };
 
+import Schema from "@/components/Schema";
+
 export default function Home() {
-  return <HomeContent />;
+  return (
+    <>
+      <Schema type="WebPage" data={{ url: "/", name: "Apex Engineering Homepage" }} />
+      <HomeContent />
+    </>
+  );
 }
