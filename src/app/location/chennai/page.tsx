@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-const BASE_URL = "https://www.apexengineering.org.in";
+const BASE_URL = "https://apexengineering.org.in";
 
 export const metadata: Metadata = {
-  title: "Industrial Fabrication Services in Chennai | Apex Engineering",
+  title: "Industrial Fabrication Workshop Chennai",
   description:
-    "Premier MS fabrication and material handling equipment manufacturer in Chennai. Serving Ambattur, Guindy, Sriperumbudur, Oragadam, Manali, and surrounding industrial hubs with custom-built solutions.",
-  alternates: { canonical: `${BASE_URL}/location/chennai` },
+    "Apex Engineering is a leading industrial fabrication workshop in Chennai. Custom MS, SS, and aluminium structures with on-site setup. Get a quote today.",
+  alternates: { canonical: `${BASE_URL}/location/chennai/` },
   keywords: [
     "industrial fabrication Chennai",
     "material handling equipment Ambattur",
@@ -17,10 +18,12 @@ export const metadata: Metadata = {
     "SS structures Manali Ennore",
   ],
   openGraph: {
-    title: "Industrial Fabrication in Chennai | Apex Engineering",
+    type: "website",
+    locale: "en_IN",
+    title: "Industrial Fabrication Workshop Chennai | Apex Engineering",
     description:
-      "Custom MS, SS & Aluminium fabrication for Chennai’s industrial hubs: Ambattur, Guindy, Sriperumbudur, Oragadam, Manali. On-site installation available.",
-    url: `${BASE_URL}/location/chennai`,
+      "Apex Engineering is a leading industrial fabrication workshop in Chennai. Custom MS, SS, and aluminium structures with on-site setup. Get a quote today.",
+    url: `${BASE_URL}/location/chennai/`,
     images: [
       {
         url: "/hero_industrial_workshop_1775677983634.png",
@@ -32,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Fabrication in Chennai | Apex Engineering",
+    title: "Industrial Fabrication Workshop Chennai | Apex Engineering",
     description:
-      "Serving Ambattur, Guindy, Sriperumbudur & more. Custom MS/SS/Aluminium fabrication in Chennai.",
+      "Apex Engineering is a leading industrial fabrication workshop in Chennai. Custom MS, SS, and aluminium structures with on-site setup. Get a quote today.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };
@@ -44,10 +47,13 @@ const ChennaiLocationPage = () => {
     <div className="location-page">
       <section className="section bg-navy text-white">
         <div className="container">
-          <h1 style={{ color: 'white' }}>Industrial Fabrication Solutions in Chennai</h1>
-          <p style={{ color: 'var(--gray-300)', fontSize: '1.25rem' }}>
-            Apex Engineering is Chennai's trusted partner for custom mild steel (MS), stainless steel (SS), and aluminium fabrication, serving key industrial corridors with 3+ years of expertise and over 500 successfully completed projects.
-          </p>
+          <Breadcrumbs items={[{ name: "Chennai", url: "/location/chennai" }]} />
+          <div style={{ marginTop: "1rem" }}>
+            <h1 style={{ color: 'white' }}>Industrial Fabrication Workshop in Chennai</h1>
+            <p style={{ color: 'var(--gray-300)', fontSize: '1.25rem' }}>
+              Apex Engineering is Chennai's trusted partner for custom mild steel (MS), stainless steel (SS), and aluminium fabrication, serving key industrial corridors with 3+ years of expertise and over 500 successfully completed projects.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -60,10 +66,10 @@ const ChennaiLocationPage = () => {
                 Operating from our manufacturing facility in Rampuram, Chennai, Apex Engineering provides technical-grade fabrication and material handling equipment. We deliver and install our products across all major industrial clusters:
               </p>
               <ul className="hubs-list">
-                <li><strong>Ambattur and Guindy Industrial Estates:</strong> High-precision fabrication of MS working tables, heavy-duty assembly benches, and certified SS 304 laboratory workbenches.</li>
-                <li><strong>Sriperumbudur and Oragadam Auto Corridors:</strong> Heavy-duty material handling trolleys, component storage racks, and custom sub-assembly jig frames designed to support loads from 500kg up to 2000kg.</li>
+                <li><strong>Ambattur and Guindy Industrial Estates:</strong> High-precision fabrication of <Link href="/products/ms-working-table/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>MS working tables</Link>, heavy-duty assembly benches, and certified <Link href="/products/laboratory-workbench/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>SS 304 laboratory workbenches</Link>.</li>
+                <li><strong>Sriperumbudur and Oragadam Auto Corridors:</strong> Heavy-duty <Link href="/products/nylon-hand-trolley/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>material handling trolleys</Link>, component storage racks, and custom sub-assembly jig frames designed to support loads from 500kg up to 2000kg.</li>
                 <li><strong>Manali and Ennore Marine Hubs:</strong> Highly corrosion-resistant Stainless Steel (SS 316 grade) structural fabrications, chemical storage racks, and specialized outdoor enclosures.</li>
-                <li><strong>Mahindra World City (MWC):</strong> Lean manufacturing flow solutions including modular ABS coated pipe trolleys, gravity roller conveyors, and custom display boards.</li>
+                <li><strong>Mahindra World City (MWC):</strong> Lean manufacturing flow solutions including modular <Link href="/products/abs-pipe-trolley/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>ABS coated pipe trolleys</Link>, gravity <Link href="/products/roller-conveyor/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>roller conveyors</Link>, and custom display boards.</li>
               </ul>
             </div>
             <div className="cta-card-local">

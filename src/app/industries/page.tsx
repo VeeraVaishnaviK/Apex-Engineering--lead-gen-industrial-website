@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-const BASE_URL = "https://www.apexengineering.org.in";
+const BASE_URL = "https://apexengineering.org.in";
 
 export const metadata: Metadata = {
-  title: "Industries Served | Manufacturing, Pharma, Automotive & Logistics",
+  title: "Fabrication for Manufacturing Chennai",
   description:
-    "Apex Engineering serves a wide range of industries including Manufacturing, Pharmaceutical, Automotive, and Logistics with specialised custom fabrication from Chennai, Tamil Nadu.",
-  alternates: { canonical: `${BASE_URL}/industries` },
+    "We provide custom fabrication for manufacturing industries in Chennai. Durable MS, SS, & aluminium structures for factory floors. Request a quote today.",
+  alternates: { canonical: `${BASE_URL}/industries/` },
   keywords: [
     "industrial fabrication for pharmaceuticals Chennai",
     "automotive parts manufacturer Tamil Nadu",
@@ -16,10 +17,12 @@ export const metadata: Metadata = {
     "laboratory workbench pharmaceutical",
   ],
   openGraph: {
-    title: "Industries Served | Apex Engineering Chennai",
+    type: "website",
+    locale: "en_IN",
+    title: "Fabrication for Manufacturing Chennai | Apex Engineering",
     description:
-      "Custom fabrication solutions for Manufacturing, Pharmaceutical, Automotive, and Logistics industries. Based in Chennai, serving all of Tamil Nadu.",
-    url: `${BASE_URL}/industries`,
+      "We provide custom fabrication for manufacturing industries in Chennai. Durable MS, SS, & aluminium structures for factory floors. Request a quote today.",
+    url: `${BASE_URL}/industries/`,
     images: [
       {
         url: "/hero_industrial_workshop_1775677983634.png",
@@ -31,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industries Served | Apex Engineering Chennai",
+    title: "Fabrication for Manufacturing Chennai | Apex Engineering",
     description:
-      "Fabrication solutions for Manufacturing, Pharma, Automotive & Logistics. Based in Chennai.",
+      "We provide custom fabrication for manufacturing industries in Chennai. Durable MS, SS, & aluminium structures for factory floors. Request a quote today.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };
@@ -41,32 +44,32 @@ export const metadata: Metadata = {
 const industries = [
   {
     title: "Primary Manufacturing",
-    desc: "From structural machine bases to specialized safety enclosures, we engineer the foundational metalwork for heavy-duty production units.",
+    desc: "From structural machine bases to specialized safety enclosures, we engineer the foundational metalwork for heavy-duty production units. View our custom [MS working tables](/products/ms-working-table) built for rigorous factory workloads.",
     points: ["Load-Bearing Work Tables", "Safety & Perimeter Cages", "Machine Structural Frames"]
   },
   {
     title: "Pharmaceutical & Clinical",
-    desc: "Hygiene-first fabrication using certified SS 304 and 316 grades. We deliver non-corrosive, easy-to-sanitize equipment that meets stringent cleanroom standards for controlled lab environments.",
+    desc: "Hygiene-first fabrication using certified SS 304 and 316 grades. We deliver non-corrosive, easy-to-sanitize equipment that meets cleanroom standards. Explore our [laboratory workbenches](/products/laboratory-workbench) for controlled environments.",
     points: ["S.S Chemical Benches", "Hygienic Material Trolleys", "Sterile Storage Cabinets"]
   },
   {
     title: "Logistics & Distribution",
-    desc: "\"According to supply chain experts, custom material handling equipment increases warehouse throughput by up to 30%.\" We engineer tailored solutions designed for high-throughput logistics and floor optimization.",
+    desc: "Custom material handling equipment helps optimize warehouse throughput and shop floor flow. We engineer tailored solutions designed for logistics and floor space utilization. See our [nylon hand trolleys](/products/nylon-hand-trolley) and [roller conveyors](/products/roller-conveyor).",
     points: ["Heavy-Duty Platform Trolleys", "Motorized Roller Conveyors", "Stackable Pallet Cages"]
   },
   {
     title: "Automotive Industrial Hubs",
-    desc: "Robust equipment specifically built to withstand the high-cycle demands of large-scale automotive assembly corridors, effectively reducing assembly line downtime by an average of 15%.",
+    desc: "Robust equipment specifically built to withstand the high-cycle demands of automotive assembly corridors. We manufacture durable sub-assembly part racks and heavy-duty kitting carts to minimize assembly downtime.",
     points: ["Heavy-Duty Welding Jigs", "Engine Storage Trolleys", "Sub-assembly Part Racks"]
   },
   {
     title: "Commercial & Corporate",
-    desc: "Functional metal structures that blend durability with modern industrial aesthetics for professional workspaces.",
+    desc: "Functional metal structures that blend durability with modern industrial aesthetics for professional workspaces and administrative zones.",
     points: ["Precision Display Units", "Filing & Documentation Grade Cabinets", "Custom Office Partitions"]
   },
   {
     title: "R&D and Innovation Centers",
-    desc: "Rapid prototyping frames and modular workstation systems for high-tech research and electronic assembly labs.",
+    desc: "Rapid prototyping frames and modular workstation systems for high-tech research. We offer specialized workbenches and custom ABS pipe structures for lean assembly lanes.",
     points: ["Technical Lab Workbenches", "Lean Utility Carts", "Modular Profile Enclosures"]
   }
 ];
@@ -74,8 +77,9 @@ const industries = [
 const IndustriesPage = () => {
   return (
     <div className="industries-page container section">
-      <div className="section-header text-center">
-        <h1>Industries We Serve</h1>
+      <Breadcrumbs items={[{ name: "Industries", url: "/industries" }]} />
+      <div className="section-header text-center" style={{ marginTop: "1rem" }}>
+        <h1>Custom Fabrication for Manufacturing Industries in Chennai</h1>
         <p>Specialized fabrication solutions tailored for sector-specific challenges.</p>
       </div>
 
@@ -83,8 +87,8 @@ const IndustriesPage = () => {
         {industries.map((ind, i) => (
           <div key={i} className="industry-box">
             <div className="industry-content">
-              <h3>{ind.title}</h3>
-              <p>{ind.desc}</p>
+              <h2>{ind.title}</h2>
+              <p dangerouslySetInnerHTML={{ __html: ind.desc.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="read-more">$1</a>') }}></p>
               <ul className="points">
                 {ind.points.map((p, j) => <li key={j}>{p}</li>)}
               </ul>

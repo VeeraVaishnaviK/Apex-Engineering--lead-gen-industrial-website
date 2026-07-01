@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutBody from "@/components/LayoutBody";
 import Schema from "@/components/Schema";
 
-const BASE_URL = "https://www.apexengineering.org.in";
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const BASE_URL = "https://apexengineering.org.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Industrial Fabrication & Material Handling Equipment Chennai | Apex Engineering",
-    template: "%s | Apex Engineering Chennai",
+    default: "Industrial Fabrication Company Chennai | Apex Engineering",
+    template: "%s | Apex Engineering",
   },
   description:
-    "Apex Engineering Chennai - trusted partner for custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks. 3+ years, 500+ projects, Chennai-wide delivery.",
+    "Apex Engineering is a leading industrial fabrication company in Chennai. We manufacture custom MS, SS & aluminium structures. Request a free quote today.",
   keywords: [
     "Industrial trolley manufacturer Chennai",
     "MS fabrication Chennai",
@@ -34,16 +41,16 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   alternates: {
-    canonical: BASE_URL,
+    canonical: `${BASE_URL}/`,
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: BASE_URL,
+    url: `${BASE_URL}/`,
     siteName: "Apex Engineering",
-    title: "Industrial Fabrication & Material Handling Equipment | Apex Engineering Chennai",
+    title: "Industrial Fabrication Company Chennai | Apex Engineering",
     description:
-      "Custom MS, SS and Aluminium fabrication, industrial trolleys, working tables, and storage racks - manufactured in Chennai. Get a free quote in 24 hours.",
+      "Apex Engineering is a leading industrial fabrication company in Chennai. We manufacture custom MS, SS & aluminium structures. Request a free quote today.",
     images: [
       {
         url: "/hero_industrial_workshop_1775677983634.png",
@@ -55,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Fabrication & Material Handling Equipment | Apex Engineering Chennai",
+    title: "Industrial Fabrication Company Chennai | Apex Engineering",
     description:
-      "Custom MS, SS and Aluminium fabrication in Chennai. Industrial trolleys, working tables, conveyors and more. 3+ years, 500+ projects.",
+      "Apex Engineering is a leading industrial fabrication company in Chennai. We manufacture custom MS, SS & aluminium structures. Request a free quote today.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };
@@ -77,8 +84,16 @@ export default async function RootLayout({
         <meta name="geo.placename" content="Chennai" />
         <meta name="geo.position" content="13.02;80.17" />
         <meta name="ICBM" content="13.02, 80.17" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/hero_industrial_workshop_1775677983634.png" fetchPriority="high" />
       </head>
-      <body>
+      <body className={inter.className}>
+        <Schema type="Organization" data={{}} />
         <Schema type="LocalBusiness" data={{}} />
         <Schema type="WebSite" data={{}} />
         <LayoutBody isAdminServer={isAdmin}>{children}</LayoutBody>

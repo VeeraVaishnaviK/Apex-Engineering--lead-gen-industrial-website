@@ -325,7 +325,7 @@ p {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 2fr;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.8fr 1.8fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -1480,13 +1480,99 @@ p {
   box-shadow: 0 15px 20px -5px rgba(0, 31, 63, 0.3);
 }
 
-@media (max-width: 480px) {
-  .lead-popup-container {
-    padding: 2rem 1.5rem;
-    border-radius: 20px;
-  }
-  
-  .lead-popup-header h2 {
-    font-size: 1.5rem;
-  }
+
+/* Breadcrumbs CSS */
+.breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  background: var(--gray-100);
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  display: inline-block;
+  width: 100%;
+}
+.breadcrumb-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.breadcrumb a {
+  color: var(--accent);
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+.breadcrumb-separator {
+  color: var(--steel);
+  font-weight: 400;
+  margin: 0 0.25rem;
+}
+.breadcrumb-current {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* Sitemap Page CSS */
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.sitemap-section {
+  background: var(--gray-100);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.sitemap-section:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.sitemap-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1.5rem;
+  color: var(--navy);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.sitemap-list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.sitemap-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.sitemap-list a {
+  color: var(--gray-800);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.sitemap-list a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }

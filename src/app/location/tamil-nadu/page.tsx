@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-const BASE_URL = "https://www.apexengineering.org.in";
+const BASE_URL = "https://apexengineering.org.in";
 
 export const metadata: Metadata = {
-  title: "Industrial Equipment Manufacturer Tamil Nadu | Apex Engineering",
+  title: "MS SS Fabrication Company Tamil Nadu",
   description:
-    "Custom material handling systems and industrial fabrication across Tamil Nadu. Serving Coimbatore, Madurai, Trichy, Hosur, and Tiruppur industrial clusters with MS, SS & Aluminium solutions.",
-  alternates: { canonical: `${BASE_URL}/location/tamil-nadu` },
+    "Apex Engineering is a premium MS & SS fabrication company serving Tamil Nadu. Custom manufacturing, material handling, & delivery. Request a quote.",
+  alternates: { canonical: `${BASE_URL}/location/tamil-nadu/` },
   keywords: [
     "industrial fabrication Tamil Nadu",
     "material handling equipment Coimbatore",
@@ -16,10 +17,12 @@ export const metadata: Metadata = {
     "heavy fabrication Madurai Trichy",
   ],
   openGraph: {
-    title: "Industrial Equipment Manufacturer Tamil Nadu | Apex Engineering",
+    type: "website",
+    locale: "en_IN",
+    title: "MS SS Fabrication Company Tamil Nadu | Apex Engineering",
     description:
-      "Statewide delivery of custom MS, SS & Aluminium industrial equipment. Serving Coimbatore, Hosur, Madurai, Trichy, Tiruppur and all Tamil Nadu industrial hubs.",
-    url: `${BASE_URL}/location/tamil-nadu`,
+      "Apex Engineering is a premium MS & SS fabrication company serving Tamil Nadu. Custom manufacturing, material handling, & delivery. Request a quote.",
+    url: `${BASE_URL}/location/tamil-nadu/`,
     images: [
       {
         url: "/hero_industrial_workshop_1775677983634.png",
@@ -31,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Manufacturer Tamil Nadu | Apex Engineering",
+    title: "MS SS Fabrication Company Tamil Nadu | Apex Engineering",
     description:
-      "Serving Coimbatore, Hosur, Madurai & more. Custom industrial fabrication across Tamil Nadu.",
+      "Apex Engineering is a premium MS & SS fabrication company serving Tamil Nadu. Custom manufacturing, material handling, & delivery. Request a quote.",
     images: ["/hero_industrial_workshop_1775677983634.png"],
   },
 };
@@ -43,10 +46,13 @@ const TamilNaduLocationPage = () => {
     <div className="location-page">
       <section className="section bg-steel text-white">
         <div className="container">
-          <h1 style={{ color: 'white' }}>Serving Tamil Nadu's Industrial Corridors</h1>
-          <p style={{ color: 'var(--gray-300)', fontSize: '1.25rem' }}>
-            Apex Engineering delivers and integrates high-performance industrial equipment across Tamil Nadu, supporting state-wide manufacturing clusters with custom MS, SS, and Aluminium structures.
-          </p>
+          <Breadcrumbs items={[{ name: "Tamil Nadu", url: "/location/tamil-nadu" }]} />
+          <div style={{ marginTop: "1rem" }}>
+            <h1 style={{ color: 'white' }}>MS & SS Fabrication Company in Tamil Nadu</h1>
+            <p style={{ color: 'var(--gray-300)', fontSize: '1.25rem' }}>
+              Apex Engineering delivers and integrates high-performance industrial equipment across Tamil Nadu, supporting state-wide manufacturing clusters with custom MS, SS, and Aluminium structures.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -59,10 +65,10 @@ const TamilNaduLocationPage = () => {
                 With over 3 years of fabrication experience, we manufacture and transport customized industrial products directly to your production site. We cater to the specific technical standards of key Tamil Nadu regional clusters:
               </p>
               <ul className="hubs-list">
-                <li><strong>Coimbatore Industrial Zone:</strong> Heavy-duty machine bases, specialized textile machinery structural frames, and custom automated workbench tables designed for vibration containment.</li>
-                <li><strong>Hosur Manufacturing Hub:</strong> Precision-engineered material handling equipment, assembly-line trolleys, and parts racks built using certified high-gauge IS 2062 mild steel.</li>
-                <li><strong>Tiruppur Textile Belt:</strong> Chemical-grade, corrosion-resistant SS 316 and SS 304 fabrications, storage bins, and custom processing tables built to withstand chemical exposure.</li>
-                <li><strong>Madurai and Trichy Engineering Corridors:</strong> Large-scale industrial shelving, structural platform walkways, and utility carts designed for heavy load-bearing capacities.</li>
+                <li><strong>Coimbatore Industrial Zone:</strong> Heavy-duty machine bases, specialized textile machinery structural frames, and custom automated <Link href="/products/ms-working-table/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>workbench tables</Link> designed for vibration containment.</li>
+                <li><strong>Hosur Manufacturing Hub:</strong> Precision-engineered <Link href="/products/nylon-hand-trolley/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>material handling equipment</Link>, assembly-line <Link href="/products/abs-pipe-trolley/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>trolleys</Link>, and parts racks built using certified high-gauge IS 2062 mild steel.</li>
+                <li><strong>Tiruppur Textile Belt:</strong> Chemical-grade, corrosion-resistant SS 316 and SS 304 fabrications, storage bins, and custom SS <Link href="/products/laboratory-workbench/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>processing tables</Link> built to withstand chemical exposure.</li>
+                <li><strong>Madurai and Trichy Engineering Corridors:</strong> Large-scale industrial shelving, structural platform walkways, and heavy-duty <Link href="/products/nylon-hand-trolley/" style={{ textDecoration: 'underline', color: 'var(--accent)' }}>utility carts</Link> designed for heavy load-bearing capacities.</li>
               </ul>
             </div>
             <div className="cta-card-local">

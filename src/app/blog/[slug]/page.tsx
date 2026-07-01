@@ -3,34 +3,36 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
 import Schema from "@/components/Schema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-const BASE_URL = "https://www.apexengineering.org.in";
+const BASE_URL = "https://apexengineering.org.in";
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
 
   return {
     title: post.title,
     description: post.excerpt,
     keywords: post.tags,
-    alternates: { canonical: `${BASE_URL}/blog/${post.slug}` },
+    alternates: { canonical: `${BASE_URL}/blog/${post.slug}/` },
     authors: [{ name: post.author }],
     openGraph: {
       type: "article",
-      title: `${post.title} | Apex Engineering Blog`,
+      title: `${post.title} | Apex Engineering`,
       description: post.excerpt,
-      url: `${BASE_URL}/blog/${post.slug}`,
+      url: `${BASE_URL}/blog/${post.slug}/`,
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
       images: [
         {
-          url: "/hero_industrial_workshop_1775677983634.png",
+          url: `${BASE_URL}/hero_industrial_workshop_1775677983634.png`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -41,13 +43,14 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
       card: "summary_large_image",
       title: `${post.title} | Apex Engineering`,
       description: post.excerpt,
-      images: ["/hero_industrial_workshop_1775677983634.png"],
+      images: [`${BASE_URL}/hero_industrial_workshop_1775677983634.png`],
     },
   };
 }
 
-export default function BlogPostPage({ params }: any) {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: any) {
+  const { slug } = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -74,7 +77,8 @@ export default function BlogPostPage({ params }: any) {
       <Schema type="BreadcrumbList" data={{ items: breadcrumbItems }} />
 
       <article className="blog-detail-page container section">
-        <div className="section-header text-center">
+        <Breadcrumbs items={[{ name: "Blog", url: "/blog" }, { name: post.title, url: `/blog/${post.slug}` }]} />
+        <div className="section-header text-center" style={{ marginTop: "1rem" }}>
           <div className="blog-meta-top">
             <Link href="/blog">← Back to Blog</Link>
             <span className="divider">|</span>

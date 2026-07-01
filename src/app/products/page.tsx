@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import ProductListClient from "./ProductListClient";
 
 export const metadata: Metadata = {
-  title: "Industrial Products — MS, SS & Aluminium Fabrication",
+  title: "Industrial Fabrication Products Chennai",
   description:
-    "Browse Apex Engineering's full range of industrial products: working tables, trolleys, storage racks, roller conveyors, machine frames, and custom fabrication. Manufactured in Chennai, Tamil Nadu.",
-  alternates: { canonical: "https://www.apexengineering.org.in/products" },
+    "Explore custom-built industrial fabrication products in Chennai. Heavy-duty working tables, trolleys, racks, and conveyors. Inquiry via WhatsApp today.",
+  alternates: { canonical: "https://apexengineering.org.in/products/" },
   keywords: [
     "industrial trolley Chennai",
     "MS working table manufacturer",
@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     "industrial fabrication products Chennai",
   ],
   openGraph: {
-    title: "Industrial Products — MS, SS & Aluminium | Apex Engineering Chennai",
+    title: "Industrial Fabrication Products Chennai | Apex Engineering",
     description:
-      "Working tables, trolleys, storage racks, roller conveyors, and custom fabrication. All products made-to-order in Chennai.",
-    url: "https://www.apexengineering.org.in/products",
+      "Explore custom-built industrial fabrication products in Chennai. Heavy-duty working tables, trolleys, racks, and conveyors. Inquiry via WhatsApp today.",
+    url: "https://apexengineering.org.in/products/",
     images: [
       {
         url: "/ms_working_table_industrial_1775678005220.png",
@@ -31,13 +31,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Products | Apex Engineering Chennai",
+    title: "Industrial Fabrication Products Chennai | Apex Engineering",
     description:
-      "MS, SS & Aluminium industrial products — trolleys, working tables, racks, conveyors. Made in Chennai.",
+      "Explore custom-built industrial fabrication products in Chennai. Heavy-duty working tables, trolleys, racks, and conveyors. Inquiry via WhatsApp today.",
     images: ["/ms_working_table_industrial_1775678005220.png"],
   },
 };
 
+import Schema from "@/components/Schema";
+
 export default function ProductsPage() {
-  return <ProductListClient />;
+  return (
+    <>
+      <Schema type="WebPage" data={{ url: "/products/", name: "Apex Engineering Products" }} />
+      <ProductListClient />
+    </>
+  );
 }

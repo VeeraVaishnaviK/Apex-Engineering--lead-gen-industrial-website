@@ -2,8 +2,10 @@
 
 import { PRODUCTS, CATEGORIES } from "@/data/productData";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Suspense, useState, useMemo } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const ProductList = () => {
   const searchParams = useSearchParams();
@@ -39,8 +41,9 @@ const ProductList = () => {
 
   return (
     <div className="container section">
-      <div className="section-header text-center">
-        <h1>All Industrial Products</h1>
+      <Breadcrumbs items={[{ name: "Products", url: "/products" }]} />
+      <div className="section-header text-center" style={{ marginTop: "1rem" }}>
+        <h1>Custom Industrial Fabrication Products in Chennai</h1>
         <p>Expertly crafted MS, SS &amp; Aluminium solutions for industrial excellence.</p>
       </div>
 
@@ -144,9 +147,13 @@ const ProductList = () => {
               className="product-card"
             >
               <div className="product-img">
-                <img
+                <Image
                   src={product.images[0] || "/hero_industrial_workshop_1775677983634.png"}
                   alt={`${product.name} — industrial fabrication by Apex Engineering Chennai`}
+                  width={400}
+                  height={300}
+                  style={{ objectFit: "cover" }}
+                  loading="lazy"
                 />
                 <span className="product-cat-tag">
                   {CATEGORIES.find((c) => c.id === product.category)?.name}
