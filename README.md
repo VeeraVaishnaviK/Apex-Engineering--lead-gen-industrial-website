@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/logo.jpg" alt="Apex Engineering Logo" width="250" />
+<img src="public/logo.jpeg" alt="Apex Engineering Logo" width="250" />
 
 # Apex Engineering
 
