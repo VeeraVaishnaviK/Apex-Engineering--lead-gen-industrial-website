@@ -28,6 +28,26 @@ const FAQS: FaqItem[] = [
   {
     question: "What is the minimum order quantity (MOQ) for custom projects?",
     answer: "Our minimum order quantity is designed to support both prototyping and bulk production. While standard items like heavy-duty platform trolleys have a nominal MOQ of 2 to 5 units, specialized R&D workbenches and machine frames can be custom-fabricated starting from a single unit (MOQ: 1)."
+  },
+  {
+    question: "What sheet metal work capabilities do you offer at the Rampuram unit?",
+    answer: "Our Rampuram, Chennai facility is equipped for complete sheet metal processing including precision shearing, bending on hydraulic press brakes, manual notch punching, and assembly fitting. We work with sheet gauges from 1.0mm up to 6.0mm in MS, SS, and aluminium to fabricate enclosures, brackets, and console panels."
+  },
+  {
+    question: "What is the difference between MS and SS fabrication for industrial applications?",
+    answer: "Mild Steel (MS) is preferred for cost-effective structural applications requiring high strength-to-weight ratios (like heavy-duty machine bases or pallet racks) and is finished with rust-preventive powder coating. Stainless Steel (SS 304/316) is selected for corrosion resistance, cleanroom compatibility, and chemical exposure (such as laboratory workbenches or food-grade storage)."
+  },
+  {
+    question: "When should we select SS 304 vs SS 316 grade stainless steel?",
+    answer: "SS 304 is the standard grade for laboratory, pharmaceutical, and generic industrial workbenches, offering excellent resistance to moisture and basic cleaning chemicals. SS 316 contains molybdenum, making it superior for harsh chemical environments, high salinity, and exposure to strong acids or marine environments."
+  },
+  {
+    question: "What surface engineering and finishing options do you provide?",
+    answer: "We offer comprehensive surface preparation and finishing services. This includes industrial-grade epoxy powder coating in custom RAL shades for MS fabrications, hot-dip galvanizing for outdoor structural frames, chemical pickling and passivation for SS parts to restore rust-resistance, and satin brush/mirror polishing."
+  },
+  {
+    question: "What are your standard payment terms and delivery arrangements for B2B contracts?",
+    answer: "Our standard B2B terms include a 50% advance payment on design sign-off, with the balance due upon inspection at our workshop or prior to dispatch. We arrange secure packaging and transport via dedicated local trucks for Chennai deliveries and verified national logistics carriers for statewide Tamil Nadu shipments."
   }
 ];
 
