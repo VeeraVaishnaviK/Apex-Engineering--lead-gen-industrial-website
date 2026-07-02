@@ -40,7 +40,6 @@ const WhyChooseUs = () => {
               <strong>3+</strong>
               <span>Years of Expertise</span>
             </div>
-            <img src="/industrial_facility_about_1775678115255.png" alt="Industrial Fabrication Facility" className="side-img" />
           </div>
         </div>
       </div>
